@@ -549,6 +549,26 @@ footer .wrapper {
         align-items: center;
         gap: 10px;
     }
+    .blog>ol {
+        /* display: block;
+        list-style-type: disc;
+        margin-top: 1em;
+        margin-bottom: 1 em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 40px;
+        nav-index: auto */
+        list-style-type: decimal;
+        padding-left: 20px;
+    }
+    .blog>li {
+        list-style-type: none;
+        margin-left: 20px;
+    }
+    .blog>li::before {
+        list-style-type: none;
+        margin-left: 20px;
+    }
     .profile-wrapper {
         width: 56px;
         height: 56px;
