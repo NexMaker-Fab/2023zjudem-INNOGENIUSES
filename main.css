@@ -418,6 +418,10 @@
         margin-bottom: 10px;
     }
     
+    .footer-logo>img {
+        border-radius: 25% 10%;
+    }
+    
     .footer-text {
         color: var(--foreground-secondary);
         max-width: 300px;
