@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Khaki 2.0 by MLPdesign</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" lang="en" content="open source x/html and css templates">
+    <meta name="author" content="mlp design">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--start wrapper-->
+    <div id="wrapper">
+
+        <!--start body-->
+        <div id="body">
+
+            <!--start header-->
+            <div id="banner">
+                <h1>Arduino <em>Projects</em> 2.0</h1>
+                <p>The fluid, responsive, HTML5, CSS only (image-free) version of the classic free template by MLP Design.</p>
+                <!-- menu -->
+                <label for="show-menu" class="responsive">&#9776;</label>
+                <input type="checkbox" id="show-menu" role="button">
+                <ul id="topnav">
+                    <li><a class="active">Project 1</a></li>
+                    <li><a href="page2.html">Project 2</a></li>
+                    <li><a href="#">Project 3</a></li>
+                </ul>
+                <!-- end menu -->
+            </div>
+            <!--end of header-->
+            <!--start sidebar-->
+            <div id="sidebar">
+                <h2>What is Arduino?</h2>
+                <p>Arduino is an open-source electronics platform that comprises both hardware and software designed for creating interactive projects. The hardware consists of a microcontroller, which is essentially a small computer on a single integrated
+                    circuit, along with a supportive development environment. Arduino boards are the key component of this platform, and they come in various sizes and shapes to accommodate different project requirements. The platform is popular among
+                    hobbyists, artists, students, and professionals due to its accessibility and ease of use. It allows individuals to create and control devices that can interact with the physical world, such as blinking lights, robots, sensors, and
+                    a wide range of other creative and technical projects. Arduino programming uses a simplified version of C/C++ language and involves writing code to tell the microcontroller on the Arduino board what to do. The code is uploaded to the
+                    board via a USB connection, and the microcontroller executes the instructions written in the code to control various components connected to it. Overall, Arduino provides an excellent entry point for people interested in learning about
+                    electronics, programming, and creating interactive projects, offering a versatile platform for innovation and experimentation. Regenerate
+
+
+                </p>
+
+                <h2>Legacy IDE</h2>
+                <p>The Arduino integrated development environment (IDE) is a cross-platform application (for Microsoft Windows, macOS, and Linux) that is written in the Java programming language. It originated from the IDE for the languages Processing and
+                    Wiring. It includes a code editor with features such as text cutting and pasting, searching and replacing text, automatic indenting, brace matching, and syntax highlighting, and provides simple one-click mechanisms to compile and upload
+                    programs to an Arduino board. It also contains a message area, a text console, a toolbar with buttons for common functions and a hierarchy of operation menus. </p>
+            </div>
+            <div class="clear"></div>
+            <!--end of sidebar-->
+
+            <!--start containter-->
+            <div id="container">
+
+                <!--start content-->
+                <div id="content">
+                    <!--post item-->
+                    <div class="item">
+                        <h3>Starting of Arduino class project:</h3>
+                        <p>Light up both LEDs simultaneously while the switch is pushed on. And turn them oﬀ when the switch is turned oﬀ or not pushed on. </p>
+                        <h2>Components: </h2>
+                        <ul>
+                            <li>Breadboard </li>
+                            <li>Arduino UNO R3</li>
+                            <li>3 Resistor of 322 ohm</li>
+                            <li>Push Switch</li>
+                            <li>Green LED</li>
+                            <li>Red LED </li>
+                        </ul>
+                        <div class="item">
+                            <h1>Code</h1>
+                            <p>int redLed=12; <br> int greenLed=13; <br> int swt=7; int val=0; <br> void setup() { pinMode(redLed,OUTPUT); <br> pinMode(greenLed,OUTPUT); <br> pinMode(swt, INPUT); <br> }
+                                <br> void loop() { val=digitalRead(swt); <br> if(val==HIGH){ digitalWrite(redLed,HIGH); <br> digitalWrite(greenLed,HIGH); <br> }else { digitalWrite(redLed,LOW); <br> digitalWrite(greenLed,LOW);
+                                <br> }
+                                <br> delay(1000);
+                                <br> }
+                            </p>
+                        </div>
+                        <img src="img/1.png" height="400px" width="500px" <figure>
+                        <p>Image 1: Thinkercad website a[er Log in</p>
+                        </figure>
+                        <img src="img/2.png" height="400px" width="500px" <figure>
+                        <p>Image 2: Preparing to create new Circuit</p>
+                        </figure>
+
+                        <img src="img/3.png" height="400px" width="500px" <figure>
+                        <p>Image 3: New Circuit Interface </p>
+                        </figure>
+
+                        <img src="img/4.png" height="400px" width="500px" <figure>
+                        <p>Image 4: Components</p>
+                        </figure>
+
+                        <img src="img/5.png" height="400px" width="500px" <figure>
+                        <p>Image 5: Circuit built </p>
+                        </figure>
+
+                        <img src="img/6.png" height="400px" width="500px" <figure>
+                        <p>Image 6: Error in code </p>
+                        </figure>
+                        <img src="img/7.png" height="400px" width="500px" <figure></figure>
+                        <p>Image 7: Error ﬁxed and the green, but a bug appears to light up the green LED</p>
+                        </figure>
+
+                        <img src="img/8.png" height="400px" width="500px" <figure>
+                        <p>Image 8: While pushed it’s turning both LEDs on</p>
+                        </figure>
+
+                        <img src="img/9.png" height="400px" width="500px" <figure>
+                        <p>Image 9: Bug ﬁxed and the LEDs are ligh bng a[er pushing the switch</p>
+                        </figure>
+                    </div>
+                    <!--another post item-->
+                    <div class="item">
+                        <h1>Code</h1>
+                        <p>int redLed=12; <br> int greenLed=13; <br> int swt=7; int val=0; <br> void setup() { pinMode(redLed,OUTPUT); <br> pinMode(greenLed,OUTPUT); <br> pinMode(swt, INPUT); <br> }
+                            <br> void loop() { val=digitalRead(swt); <br> if(val==HIGH){ digitalWrite(redLed,HIGH); <br> digitalWrite(greenLed,HIGH); <br> }else { digitalWrite(redLed,LOW); <br> digitalWrite(greenLed,LOW);
+                            <br> }
+                            <br> delay(1000);
+                            <br> }
+                        </p>
+                    </div>
+                    <h1>Modiﬁed Project-1</h1>
+                    <p>We are trying to modify the class project to light up the LEDs separately. Our goal is to light up the Green LED turned on when the switch is turned oﬀ (val = 0). And Red LED lights up when the switch is pushed (val=1).</p>
+                    <h1>Code</h1>
+                    <p>int redLed=12;<br> int greenLed=13; <br> int swt=7; <br> int val=0; <br> void setup() { <br> pinMode(redLed,OUTPUT); <br> pinMode(greenLed,OUTPUT); <br> pinMode(swt, INPUT); <br> }
+                        <br> void loop() { <br> val=digitalRead(7); <br> if(val==HIGH){ <br> digitalWrite(redLed,HIGH); <br> digitalWrite(greenLed,LOW); <br> }
+                        <br> else { digitalWrite(redLed,LOW); <br> digitalWrite(greenLed,HIGH); <br> }
+                        <br> delay(1000); // put your main code here, to run repeatedly: <br> }
+                    </p>
+                    <img src="img/Green.png" height="400px" width="500px" <figure>
+                    <p>Image 10: Green is Lighting while switch is not pushed on. </p>
+                    </figure>
+                    <img src="img/Red.png" height="400px" width="500px" <figure>
+                    <p>Image 11: Red is Lighting while switch is pushed on. </p>
+                    </figure>
+                    <h1>Modiﬁed Project-2</h1>
+                    <p>We are going to remove the switch to blink the LEDs separately</p>
+                    <h1>Code</h1>
+                    <p>int redLed = 12; <br> int greenLed = 13; <br> void setup() { <br> pinMode(redLed,OUTPUT); <br> pinMode(greenLed,OUTPUT); <br> pinMode(7,INPUT); <br> }
+                        <br> void loop(){ <br> digitalWrite(redLed,HIGH); <br> digitalWrite(greenLed,LOW); <br> delay(700); <br> digitalWrite(redLed,LOW); <br> digitalWrite(greenLed,HIGH); <br> delay (700); <br> }
+                        <br>
+                    </p>
+                    <img src="img/Red.png" height="400px" width="500px" <figure>
+                    <p>Image 11: Red LED is lighꢀng up </p>
+                    </figure>
+                    <img src="img/Green.png" height="400px" width="500px" <figure>
+                    <p>Image 12: Green LED is lighꢀng up </p>
+                    </figure>
+
+                    <!--end of another post item-->
+                </div>
+                <!--end of content-->
+
+            </div>
+            <!--end of container-->
+
+        </div>
+        <!--end of body-->
+
+        <!--start footer-->
+        <div id="footer">
+            <span class="left">2023 &copy; Copyright <a href="#">AAcode</a>. All rights reserved.</span>
+            <span class="right"><a href="#">Contact</a> | <a href="#">Site Map</a></span>
+            <p class="show-footer">2023 &copy; Copyright <a href="#">Your Name</a>. All rights reserved.<br /><a href="#">Contact</a> | <a href="#">Site Map</a></p>
+        </div>
+        <!--end of footer-->
+
+    </div>
+    <!--end of wrapper-->
+
+    <!--start credits-->
+    <!--//Under CC-NC 3.0, this portion must be left intact and must not be hidden.//-->
+    <div id="credits">
+        <span><a href="#" title="CSS &amp; ">CSS &amp; HTML</a> by MLP Design<br />Licensed under <a rel="license" href="#">Creative Commons Attribution-NonCommercial 3.0</a>.</span>
+    </div>
+    <!--end of credits-->
+
+</body>
+
+</html>
