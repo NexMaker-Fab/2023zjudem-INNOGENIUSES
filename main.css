@@ -569,6 +569,9 @@
             align-items: start;
             gap: 0;
         }
+        .blog .sidebar ul ul {
+            padding-left: 20px;
+        }
         /**
      * FOOTER 
      */
