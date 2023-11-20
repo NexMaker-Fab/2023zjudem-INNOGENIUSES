@@ -249,6 +249,11 @@ ul#topnav li a:hover {
     text-align: justify;
 }
 
+#content .item b {
+    text-align: justify;
+    color: red;
+}
+
 #content .item span {
     background-color: inherit;
     color: #999;
