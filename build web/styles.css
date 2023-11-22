@@ -43,7 +43,7 @@ h3 {
 
 a {
     background-color: inherit;
-    color: #996;
+    color: rgb(0, 38, 255)122, 102, 153;
     text-decoration: none;
 }
 
@@ -217,8 +217,8 @@ ul#topnav li a:hover {
 #content {
     text-align: left;
     padding: 20px;
+    width: 750px;
     padding-left: 200px;
-    margin-right: 245px;
 }
 
 #content h1 {
@@ -237,7 +237,7 @@ ul#topnav li a:hover {
 
 #content ul li:before {
     content: "\00BB  ";
-    color: #996;
+    color: rgb(51, 0, 255);
 }
 
 #content .item {
@@ -258,6 +258,11 @@ ul#topnav li a:hover {
     background-color: inherit;
     color: #999;
     font-size: 11px;
+}
+
+#content .item img {
+    width: 750px;
+    height: 500px;
 }
 
 #footer {
