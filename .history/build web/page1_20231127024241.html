@@ -139,9 +139,9 @@
                         <img src="img/bw5.png" alt="description photo" style="width:100%; height:fit-content;">
                         <p>I wrote several lines of code for the button, link, navbar, and logo in the header section. All of the HTML code is shown in the Code Area below.</p>
                         <div class="code-boxes">
-                            <div class="code-box codeBox">
+                            <div class="code-box CodeBox">
                                 <div class="topic">Code:</div>
-                                <textarea id="codeBox" readonly>
+                                <textarea id="CodeBox" readonly>
 <nav class="navbar">
     <a href="#">
         <img src="img/teamLogo.png" alt="Team LoGo" width="150" height="80" class="logo-light"
@@ -216,7 +216,7 @@
 
 </nav>
                             </textarea>
-                                <button id="codeButton">Copy Codes</button>
+                                <button id="CodeButton">Copy Codes</button>
                             </div>
                         </div>
                         <h3>STEP 10: Switch Day/Night Button</h3>
@@ -224,20 +224,23 @@
                             switch below.
                         </p>
                         <div class="code-boxes">
-                            <div class="code-box codeBox">
+                            <div class="code-box CodeBox">
                                 <div class="topic">Code:</div>
-                                <textarea id="codeBox" readonly>
-    <div class="btn-group">
-    <button class="theme-btn theme-btn-mobile light">
-    <ion-icon name="moon" class="moon"></ion-icon>
-    <ion-icon name="sunny" class="sun"></ion-icon>
-    </button>
-    <button class="nav-menu-btn">
-    <ion-icon name="menu-outline"></ion-icon>
-    </button>
-    </div>
-                            </textarea>
-                                <button id="codeButton">Copy Codes</button>
+                                <textarea id="CodeBox" readonly>
+<div class="btn-group">
+
+<button class="theme-btn theme-btn-mobile light">
+<ion-icon name="moon" class="moon"></ion-icon>
+<ion-icon name="sunny" class="sun"></ion-icon>
+</button>
+
+<button class="nav-menu-btn">
+<ion-icon name="menu-outline"></ion-icon>
+</button>
+
+</div>
+                    </textarea>
+                                <button id="CodeButton">Copy Codes</button>
                             </div>
                         </div>
 
@@ -302,11 +305,11 @@
 
 <script>
     // Code BOx JS Code
-    let codeBox = document.getElementById("codeBox");
-    let codeButton = document.getElementById("codeButton");
-    codeButton.onclick = function () {
-        codeBox.select();
+    let CodeBox = document.getElementById("CodeBox");
+    let CodeButton = document.getElementById("CodeButton");
+    CodeButton.onclick = function () {
+        CodeBox.select();
         document.execCommand("copy");
-        codeButton.innerText = "Codes Copied";
+        CodeButton.innerText = "Codes Copied";
     };
 </script>

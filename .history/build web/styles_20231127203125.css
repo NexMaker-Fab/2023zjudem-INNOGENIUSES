@@ -437,6 +437,7 @@ ul#topnav li a:hover {
     flex-direction: column;
     align-items: center;
     padding: 5px;
+    border: 1px solid #000;
 }
 
 .code-boxes .code-box {
@@ -453,15 +454,15 @@ ul#topnav li a:hover {
 }
 
 .code-boxes .code-box textarea {
-    height: 85%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     font-size: 15px;
     font-weight: 400;
+    outline: none;
     border: 1px solid #bcf732;
     border-radius: 5px 5px 5px 20px;
     background: #e7edfe;
-    align-items: center;
-    padding: 10px 0px 0px 10px;
+    border: 2px solid green;
 }
 
 .code-box textarea::-webkit-scrollbar {

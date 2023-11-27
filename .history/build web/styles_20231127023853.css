@@ -430,47 +430,48 @@ ul#topnav li a:hover {
 
 /* CodeBox CSS */
 
-.code-boxes {
-    height: 500px;
-    width: 100%;
-    display: flexbox;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-}
-
-.code-boxes .code-box {
+.text-boxes {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding: 10px 10px;
 }
 
-.code-boxes .code-box .topic {
+.text-boxes .text-box {
+    height: 300px;
+    max-width: 660px;
+    width: 100%;
+    margin: 20px 20px;
+}
+
+.text-boxes .text-box .topic {
     font-size: 18px;
     font-weight: 600;
     color: rgb(72, 242, 38);
-    margin-bottom: 5px;
+    margin: 4px;
 }
 
-.code-boxes .code-box textarea {
-    height: 85%;
-    width: 90%;
+.text-boxes .text-box textarea {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
     font-size: 15px;
     font-weight: 400;
+    outline: none;
     border: 1px solid #bcf732;
-    border-radius: 5px 5px 5px 20px;
+    border-radius: 8px;
     background: #e7edfe;
-    align-items: center;
-    padding: 10px 0px 0px 10px;
 }
 
-.code-box textarea::-webkit-scrollbar {
+.text-box textarea::-webkit-scrollbar {
     display: none;
 }
 
-.code-boxes .code-box button {
+.text-boxes .text-box button {
     height: 45px;
-    width: 100px;
+    width: 155px;
     color: #fff;
     background: #2b910f;
     outline: none;
@@ -483,13 +484,12 @@ ul#topnav li a:hover {
     transition: all 0.4s ease;
 }
 
-.code-boxes .code-box button:hover {
+.text-boxes .text-box button:hover {
     background: #8a0606;
 }
 
-
-/* @media (max-width: 400px) {
-    .code-boxes .code-box button {
+@media (max-width: 400px) {
+    .text-boxes .text-box button {
         width: 100%;
     }
-} */
+}

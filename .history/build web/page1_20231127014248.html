@@ -132,114 +132,19 @@
                         <p>In a Body of the HTML document consists of three primary sections. Header-Main-Footer. I wrote 3 tag and make workspaces for build my webpage step by step. I demonstrate about this tag underneath this image.
                         </p>
                         <img src="img/bw4.png" alt="description photo" style="width:50%; height:fit-content;">
-                        <h3>STEP 9: <a href="#BuildLogo">Logo</a> Design</h3>
-                        <p>A logo might represent a company, a group, or anything else. Therefore, the logo is given top priority on any website. Therefore, we construct a navbar in the Heading section and write some code for that when we add a logo to a
-                            website. The code and explanation are available in the picture below.
+                        <h3>STEP 9: Divided and write document for webpage</h3>
+                        <p>In a Body of the HTML document consists of three primary sections. Header-Main-Footer. I wrote 3 tag and make workspaces for build my webpage step by step. I demonstrate about this tag underneath this image.
                         </p>
-                        <img src="img/bw5.png" alt="description photo" style="width:100%; height:fit-content;">
-                        <p>I wrote several lines of code for the button, link, navbar, and logo in the header section. All of the HTML code is shown in the Code Area below.</p>
-                        <div class="code-boxes">
-                            <div class="code-box codeBox">
+                        <img src="img/bw4.png" alt="description photo" style="width:50%; height:fit-content;">
+                        <div class="text-boxes">
+                            <div class="text-box CodeBox">
                                 <div class="topic">Code:</div>
-                                <textarea id="codeBox" readonly>
-<nav class="navbar">
-    <a href="#">
-        <img src="img/teamLogo.png" alt="Team LoGo" width="150" height="80" class="logo-light"
-            style="border-radius: 25px;">
-        <img src="img/teamLogo.png" alt="Team logo" width="150" height="80" class="logo-dark"
-            style="border-radius: 25px;">
-    </a>
-
-    <div class="btn-group">
-
-        <button class="theme-btn theme-btn-mobile light">
-            <ion-icon name="moon" class="moon"></ion-icon>
-            <ion-icon name="sunny" class="sun"></ion-icon>
-        </button>
-
-        <button class="nav-menu-btn">
-            <ion-icon name="menu-outline"></ion-icon>
-        </button>
-
-    </div>
-
-    <div class="flex-wrapper">
-
-        <ul class="desktop-nav">
-
-            <li>
-                <a href="#home" class="nav-link">Home</a>
-            </li>
-
-            <li>
-                <a href="#project" class="nav-link">Projects</a>
-            </li>
-
-            <li>
-                <a href="#contact" class="nav-link">Contact US</a>
-            </li>
-
-        </ul>
-
-        <button class="theme-btn theme-btn-desktop light">
-            <ion-icon name="moon" class="moon"></ion-icon>
-            <ion-icon name="sunny" class="sun"></ion-icon>
-        </button>
-
-    </div>
-
-    <div class="mobile-nav">
-
-        <button class="nav-close-btn">
-            <ion-icon name="close-outline"></ion-icon>
-        </button>
-
-        <div class="wrapper">
-
-            <p class="h3 nav-title">Main Menu</p>
-
-            <ul>
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#project" class="nav-link">Projects</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#contact">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-</nav>
-                            </textarea>
-                                <button id="codeButton">Copy Codes</button>
+                                <textarea placeholder="Code" id="CodeBox" readonly>
+                              Add HTML Code Here
+                            </textarea
+                              >
+                              <button id="CodeButton">Copy Codes</button>
                             </div>
-                        </div>
-                        <h3>STEP 10: Switch Day/Night Button</h3>
-                        <p>These days, day-night mode is a well-known feature of a web.To alter the website's theme and vibe from day to night, I created a switch button within the navigation bar. I've included proof of the code I built to create this day/night
-                            switch below.
-                        </p>
-                        <div class="code-boxes">
-                            <div class="code-box codeBox">
-                                <div class="topic">Code:</div>
-                                <textarea id="codeBox" readonly>
-    <div class="btn-group">
-    <button class="theme-btn theme-btn-mobile light">
-    <ion-icon name="moon" class="moon"></ion-icon>
-    <ion-icon name="sunny" class="sun"></ion-icon>
-    </button>
-    <button class="nav-menu-btn">
-    <ion-icon name="menu-outline"></ion-icon>
-    </button>
-    </div>
-                            </textarea>
-                                <button id="codeButton">Copy Codes</button>
-                            </div>
-                        </div>
 
                         <h3>STEP 4: How to collaborate with team</h3>
                         <h4>1.Inviting a team or person</h4>
@@ -293,20 +198,9 @@
     <!--//Under CC-NC 3.0, this portion must be left intact and must not be hidden.//-->
     <div id="credits">
         <span><a href="#" title="CSS &amp; ">CSS &amp; HTML</a> by InnoGeniuses<br />IDE@ZJU
-        </div>
-        <!--end of credits-->
+    </div>
+    <!--end of credits-->
 
 </body>
 
 </html>
-
-<script>
-    // Code BOx JS Code
-    let codeBox = document.getElementById("codeBox");
-    let codeButton = document.getElementById("codeButton");
-    codeButton.onclick = function () {
-        codeBox.select();
-        document.execCommand("copy");
-        codeButton.innerText = "Codes Copied";
-    };
-</script>
