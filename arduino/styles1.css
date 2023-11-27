@@ -223,7 +223,9 @@ ul#topnav li a:hover {
 
 #content h1 {
     font: normal 18px Arial, sans-serif;
-    padding: 0;
+    font-weight: bold;
+    padding-left: 40%;
+    color: #0c13ed;
 }
 
 #content ul {
@@ -402,8 +404,8 @@ ul#topnav li a:hover {
     #content {
         margin-right: 33%;
     }
-    #content h1 {
-        font-size: 14px;
+    #content .item h1 {
+        font-size: 20px;
         font-weight: bold;
     }
     #content .item span {
