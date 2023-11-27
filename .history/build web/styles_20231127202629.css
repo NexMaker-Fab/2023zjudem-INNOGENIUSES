@@ -431,37 +431,42 @@ ul#topnav li a:hover {
 /* CodeBox CSS */
 
 .code-boxes {
-    height: 500px;
+    height: 400px;
     width: 100%;
     display: flexbox;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid #000;
 }
 
 .code-boxes .code-box {
     height: 100%;
+    max-width: 700px;
     width: 100%;
-    align-items: center;
+    margin: 10px 10px;
+    border: 2px solid red;
 }
 
 .code-boxes .code-box .topic {
     font-size: 18px;
     font-weight: 600;
     color: rgb(72, 242, 38);
-    margin-bottom: 5px;
+    margin: 4px;
+    border: 1px solid yellow;
 }
 
 .code-boxes .code-box textarea {
-    height: 85%;
-    width: 90%;
+    height: 80%;
+    width: 80%;
     font-size: 15px;
     font-weight: 400;
+    outline: none;
     border: 1px solid #bcf732;
     border-radius: 5px 5px 5px 20px;
     background: #e7edfe;
-    align-items: center;
-    padding: 10px 0px 0px 10px;
+    border: 2px solid green;
 }
 
 .code-box textarea::-webkit-scrollbar {
