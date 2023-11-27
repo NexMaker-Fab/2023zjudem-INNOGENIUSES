@@ -23,6 +23,10 @@
         --accent: hsl(229, 76%, 66%);
     }
     
+    .dark-theme .right img {
+        image-rendering: url(img/teamPhotoNight.jpg);
+    }
+    
      :root {
         /**
      * color
