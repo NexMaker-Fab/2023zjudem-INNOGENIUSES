@@ -84,6 +84,8 @@ blockquote {
 /* Other Settings*/
 
 #banner {
+    transition: top 0.3s;
+    /* Add transition for smooth animation */
     position: relative;
     padding: 10px;
     height: 175px;
@@ -97,6 +99,11 @@ blockquote {
     background: -ms-linear-gradient(top, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
     background: linear-gradient(to bottom, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#abab83', endColorstr='#a1a172', GradientType=0);
+}
+
+.hide {
+    top: -100px;
+    /* Hides the banner by moving it off the viewport */
 }
 
 #banner h1 {

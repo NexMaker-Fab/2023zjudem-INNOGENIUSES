@@ -84,9 +84,13 @@ blockquote {
 /* Other Settings*/
 
 #banner {
-    position: relative;
-    padding: 10px;
-    height: 175px;
+    transition: top 0.3s;
+    /* Add transition for smooth animation */
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    height: 100px;
     border: 0px;
     color: #fff;
     background: #abab83;
@@ -97,6 +101,13 @@ blockquote {
     background: -ms-linear-gradient(top, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
     background: linear-gradient(to bottom, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#abab83', endColorstr='#a1a172', GradientType=0);
+}
+
+.hide {
+    .hide {
+        transform: translateY(-100%);
+    }
+    /* Hides the banner by moving it off the viewport */
 }
 
 #banner h1 {
@@ -215,6 +226,7 @@ ul#topnav li a:hover {
 }
 
 #content {
+    padding-top: 100px;
     text-align: left;
     padding: 20px;
     width: 750px;

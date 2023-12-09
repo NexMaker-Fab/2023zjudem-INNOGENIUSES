@@ -84,9 +84,11 @@ blockquote {
 /* Other Settings*/
 
 #banner {
-    position: relative;
-    padding: 10px;
-    height: 175px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    height: 100px;
     border: 0px;
     color: #fff;
     background: #abab83;

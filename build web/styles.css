@@ -76,9 +76,11 @@ blockquote {
 /* Other Settings*/
 
 #banner {
-    position: relative;
-    padding: 10px;
-    height: 175px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    height: 100px;
     border: 0px;
     color: #fff;
     background: #abab83;
@@ -207,10 +209,11 @@ ul#topnav li a:hover {
 }
 
 #content {
+    margin-top: 100px;
     text-align: left;
     padding: 20px;
     width: 750px;
-    padding-left: 200px;
+    padding-left: 250px;
 }
 
 #content h1 {
