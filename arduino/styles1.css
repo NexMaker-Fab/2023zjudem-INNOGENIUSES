@@ -84,7 +84,7 @@ blockquote {
 /* Other Settings*/
 
 #banner {
-    transition: top 0.3s;
+    /* transition: top 0.3s; */
     /* Add transition for smooth animation */
     position: fixed;
     width: 100%;
@@ -103,12 +103,12 @@ blockquote {
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#abab83', endColorstr='#a1a172', GradientType=0);
 }
 
-.hide {
+
+/* .hide {
     .hide {
         transform: translateY(-100%);
-    }
+    } 
     /* Hides the banner by moving it off the viewport */
-}
 
 #banner h1 {
     font-size: 32px;
