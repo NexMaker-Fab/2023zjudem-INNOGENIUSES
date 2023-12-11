@@ -530,10 +530,13 @@ text-decoration: underline;
 
                         </section>
                         <section class="Cbox 15">
-                            <h3>STEP 15: All the source code of main webpage</h3>
-                            <p>
-                                I guess you already understand the aim of my codes and how they work. To make it essential, I will provide all the HTML, CSS, and JS code, and you can collect images from this website as well.
-                            </p>
+
+                        </section>
+                        <h3>STEP 15: All the source code of main webpage</h3>
+                        <p>
+                            I guess you already understand the aim of my codes and how they work. To make it essential, I will provide all the HTML, CSS, and JS code, and you can collect images from this website as well.
+                        </p>
+                        <div class="code-boxes">
                             <div class="code-box codeBox">
                                 <div class="topic">HTML Code:</div>
                                 <textarea id="codeBox" readonly>
@@ -802,6 +805,8 @@ text-decoration: underline;
 </textarea>
                                 <button id="codeButton">Copy Codes</button>
                             </div>
+                        </div>
+                        <div class="code-boxes">
                             <div class="code-box codeBox">
                                 <div class="topic">CSS Code:</div>
                                 <textarea id="codeBox" readonly>
@@ -1669,7 +1674,9 @@ text-decoration: underline;
 </textarea>
                                 <button id="codeButton">Copy Codes</button>
                             </div>
+                        </div>
 
+                        <div class="code-boxes">
                             <div class="code-box codeBox">
                                 <div class="topic">JS Code [script.js]:</div>
                                 <textarea id="codeBox" readonly>
@@ -1719,8 +1726,8 @@ text-decoration: underline;
 </textarea>
                                 <button id="codeButton">Copy Codes</button>
                             </div>
+                        </div>
 
-                        </section>
                         <h3 id="logoDesign">Tips: How to make a free logo</h3>
                         <p>In most cases, we are not skilled in Photoshop or design; this also applies to me. I thus used some online assistance to create a fantastic and free logo for my website. I'll list every resource below, along with a case study:
                         </p>
@@ -1819,18 +1826,18 @@ text-decoration: underline;
         <span><a href="#" title="CSS &amp; ">CSS &amp; HTML</a> by InnoGeniuses<br />IDE@ZJU
     </div>
     <!--end of credits-->
-    <script>
-    
 
-
-    let codeBox = document.getElementById("codeBox");
-let codeButton = document.getElementById("codeButton");
-codeButton.onclick = function() {
-    codeBox.select();
-    document.execCommand("copy");
-    codeButton.innerText = "Codes Copied";
-};
-    </script>
 </body>
 
 </html>
+
+<script>
+    // Code BOx JS Code
+    let codeBox = document.getElementById("codeBox");
+    let codeButton = document.getElementById("codeButton");
+    codeButton.onclick = function () {
+        codeBox.select();
+        document.execCommand("copy");
+        codeButton.innerText = "Codes Copied";
+    };
+</script>

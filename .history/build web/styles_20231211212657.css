@@ -430,40 +430,50 @@ ul#topnav li a:hover {
 
 /* CodeBox CSS */
 
-.code-box {
-    height: 600px;
+.code-boxes {
+    height: 100%;
     width: 100%;
-    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
 }
 
-.code-box .topic {
+.code-boxes .code-box {
+    height: 380px;
+    max-width: 660px;
+    width: 100%;
+    margin: 55px 0;
+}
+
+.code-boxes .code-box .topic {
     font-size: 18px;
     font-weight: 600;
-    color: #fc5d8a;
+    color: #265df2;
     margin: 4px;
 }
 
-.code-box textarea {
-    height: 75%;
-    width: 95%;
-    padding: 20px;
-    font-size: 12px;
-    font-weight: 200;
+.code-boxes .code-box textarea {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    font-size: 15px;
+    font-weight: 400;
     outline: none;
-    border: 1px solid #fc5d8a;
-    border-radius: 2px 10px;
-    background: #d7f2a0c4;
+    border: 1px solid #265df2;
+    border-radius: 8px;
+    background: #e7edfe;
 }
 
 .code-box textarea::-webkit-scrollbar {
     display: none;
 }
 
-.code-box button {
-    height: 30px;
-    width: auto;
+.code-boxes .code-box button {
+    height: 45px;
+    width: 155px;
     color: #fff;
-    background: #629326;
+    background: #265df2;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -474,12 +484,12 @@ ul#topnav li a:hover {
     transition: all 0.4s ease;
 }
 
-.code-box button:hover {
-    background: #fc5d8a;
+.code-boxes .code-box button:hover {
+    background: #0e4bf1;
 }
 
 @media (max-width: 400px) {
-    .code-box button {
+    .code-boxes .code-box button {
         width: 100%;
     }
 }

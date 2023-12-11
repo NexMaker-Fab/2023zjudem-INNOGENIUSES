@@ -361,9 +361,10 @@ display: none;
                             </p>
                             <h4>Project List</h4>
                             <p>If you look at the code below, you will see that I sorted the project list using a list tag.</p>
-                            <div class="code-box codeBox">
-                                <div class="topic">HTML Code:</div>
-                                <textarea id="codeBox" readonly>
+                            <div class="code-boxes">
+                                <div class="code-box codeBox">
+                                    <div class="topic">HTML Code:</div>
+                                    <textarea id="codeBox" readonly>
     <div class="sidebar">
         <ul>
         <li>
@@ -386,13 +387,15 @@ display: none;
         </ul>
         </div>
 </textarea>
-                                <button id="codeButton">Copy Codes</button>
+                                    <button id="codeButton">Copy Codes</button>
+                                </div>
                             </div>
                             <h4>Team List</h4>
                             <p>To make the team members list look nice and ordered like an asdie bar, I took some links, arranged them, and added some CSS code.</p>
-                            <div class="code-box codeBox">
-                                <div class="topic">HTML Code:</div>
-                                <textarea id="codeBox" readonly>
+                            <div class="code-boxes">
+                                <div class="code-box codeBox">
+                                    <div class="topic">HTML Code:</div>
+                                    <textarea id="codeBox" readonly>
     <div class="topics">
 
         <h2 class="h2">Team Members</h2>
@@ -417,11 +420,13 @@ display: none;
         </a>
         </div>
 </textarea>
-                                <button id="codeButton">Copy Codes</button>
+                                    <button id="codeButton">Copy Codes</button>
+                                </div>
                             </div>
-                            <div class="code-box codeBox">
-                                <div class="topic">CSS Code:</div>
-                                <textarea id="codeBox" readonly>
+                            <div class="code-boxes">
+                                <div class="code-box codeBox">
+                                    <div class="topic">CSS Code:</div>
+                                    <textarea id="codeBox" readonly>
     //In main section project details and team members link design css
 
     .blog .h2 {
@@ -454,15 +459,18 @@ display: none;
     font-size: 20px;
     }
 </textarea>
-                                <button id="codeButton">Copy Codes</button>
+                                    <button id="codeButton">Copy Codes</button>
+                                </div>
                             </div>
 
+
                         </section>
-                        <section class="Cbox 14">
-                            <h3>STEP 14: Footer</h3>
-                            <p>The final and most crucial section of every website is this one. Because this section allows us to add a site map, copyright restrictions, or important notes and contracts. Let's examine the HTML and CSS code to understand
-                                its functionality.
-                            </p>
+
+                        <h3>STEP 14: Footer</h3>
+                        <p>The final and most crucial section of every website is this one. Because this section allows us to add a site map, copyright restrictions, or important notes and contracts. Let's examine the HTML and CSS code to understand its
+                            functionality.
+                        </p>
+                        <div class="code-boxes">
                             <div class="code-box codeBox">
                                 <div class="topic">HTML Code:</div>
                                 <textarea id="codeBox" readonly>
@@ -475,6 +483,8 @@ display: none;
 </textarea>
                                 <button id="codeButton">Copy Codes</button>
                             </div>
+                        </div>
+                        <div class="code-boxes">
                             <div class="code-box codeBox">
                                 <div class="topic">Css Code:</div>
                                 <textarea id="codeBox" readonly>
@@ -527,13 +537,13 @@ text-decoration: underline;
 </textarea>
                                 <button id="codeButton">Copy Codes</button>
                             </div>
+                        </div>
 
-                        </section>
-                        <section class="Cbox 15">
-                            <h3>STEP 15: All the source code of main webpage</h3>
-                            <p>
-                                I guess you already understand the aim of my codes and how they work. To make it essential, I will provide all the HTML, CSS, and JS code, and you can collect images from this website as well.
-                            </p>
+                        <h3>STEP 15: All the source code of main webpage</h3>
+                        <p>
+                            I guess you already understand the aim of my codes and how they work. To make it essential, I will provide all the HTML, CSS, and JS code, and you can collect images from this website as well.
+                        </p>
+                        <div class="code-boxes">
                             <div class="code-box codeBox">
                                 <div class="topic">HTML Code:</div>
                                 <textarea id="codeBox" readonly>
@@ -802,6 +812,8 @@ text-decoration: underline;
 </textarea>
                                 <button id="codeButton">Copy Codes</button>
                             </div>
+                        </div>
+                        <div class="code-boxes">
                             <div class="code-box codeBox">
                                 <div class="topic">CSS Code:</div>
                                 <textarea id="codeBox" readonly>
@@ -1669,7 +1681,9 @@ text-decoration: underline;
 </textarea>
                                 <button id="codeButton">Copy Codes</button>
                             </div>
+                        </div>
 
+                        <div class="code-boxes">
                             <div class="code-box codeBox">
                                 <div class="topic">JS Code [script.js]:</div>
                                 <textarea id="codeBox" readonly>
@@ -1719,8 +1733,8 @@ text-decoration: underline;
 </textarea>
                                 <button id="codeButton">Copy Codes</button>
                             </div>
+                        </div>
 
-                        </section>
                         <h3 id="logoDesign">Tips: How to make a free logo</h3>
                         <p>In most cases, we are not skilled in Photoshop or design; this also applies to me. I thus used some online assistance to create a fantastic and free logo for my website. I'll list every resource below, along with a case study:
                         </p>
@@ -1819,18 +1833,18 @@ text-decoration: underline;
         <span><a href="#" title="CSS &amp; ">CSS &amp; HTML</a> by InnoGeniuses<br />IDE@ZJU
     </div>
     <!--end of credits-->
-    <script>
-    
 
-
-    let codeBox = document.getElementById("codeBox");
-let codeButton = document.getElementById("codeButton");
-codeButton.onclick = function() {
-    codeBox.select();
-    document.execCommand("copy");
-    codeButton.innerText = "Codes Copied";
-};
-    </script>
 </body>
 
 </html>
+
+<script>
+    // Code BOx JS Code
+    let codeBox = document.getElementById("codeBox");
+    let codeButton = document.getElementById("codeButton");
+    codeButton.onclick = function () {
+        codeBox.select();
+        document.execCommand("copy");
+        codeButton.innerText = "Codes Copied";
+    };
+</script>

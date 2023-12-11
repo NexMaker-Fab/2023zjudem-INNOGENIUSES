@@ -475,7 +475,7 @@ ul#topnav li a:hover {
 }
 
 .code-box button:hover {
-    background: #fc5d8a;
+    background: fc5d8a;
 }
 
 @media (max-width: 400px) {

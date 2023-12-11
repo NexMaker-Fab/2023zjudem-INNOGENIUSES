@@ -463,7 +463,7 @@ ul#topnav li a:hover {
     height: 30px;
     width: auto;
     color: #fff;
-    background: #629326;
+    background: #96f226;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -475,7 +475,7 @@ ul#topnav li a:hover {
 }
 
 .code-box button:hover {
-    background: #fc5d8a;
+    background: #0e4bf1;
 }
 
 @media (max-width: 400px) {

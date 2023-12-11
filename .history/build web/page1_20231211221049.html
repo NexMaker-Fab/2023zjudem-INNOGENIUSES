@@ -1670,9 +1670,10 @@ text-decoration: underline;
                                 <button id="codeButton">Copy Codes</button>
                             </div>
 
-                            <div class="code-box codeBox">
-                                <div class="topic">JS Code [script.js]:</div>
-                                <textarea id="codeBox" readonly>
+                            <div class="code-boxes">
+                                <div class="code-box codeBox">
+                                    <div class="topic">JS Code [script.js]:</div>
+                                    <textarea id="codeBox" readonly>
 <!-- Start code 
     'use strict';
 
@@ -1717,7 +1718,8 @@ text-decoration: underline;
     }
     -->
 </textarea>
-                                <button id="codeButton">Copy Codes</button>
+                                    <button id="codeButton">Copy Codes</button>
+                                </div>
                             </div>
 
                         </section>
@@ -1819,18 +1821,18 @@ text-decoration: underline;
         <span><a href="#" title="CSS &amp; ">CSS &amp; HTML</a> by InnoGeniuses<br />IDE@ZJU
     </div>
     <!--end of credits-->
-    <script>
-    
 
-
-    let codeBox = document.getElementById("codeBox");
-let codeButton = document.getElementById("codeButton");
-codeButton.onclick = function() {
-    codeBox.select();
-    document.execCommand("copy");
-    codeButton.innerText = "Codes Copied";
-};
-    </script>
 </body>
 
 </html>
+
+<script>
+    // Code BOx JS Code
+    let codeBox = document.getElementById("codeBox");
+    let codeButton = document.getElementById("codeButton");
+    codeButton.onclick = function () {
+        codeBox.select();
+        document.execCommand("copy");
+        codeButton.innerText = "Codes Copied";
+    };
+</script>
