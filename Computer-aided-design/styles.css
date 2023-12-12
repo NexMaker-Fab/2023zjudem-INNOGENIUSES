@@ -43,7 +43,7 @@ h3 {
 
 a {
     background-color: inherit;
-    color: rgb(0, 38, 255)122, 102, 153;
+    color: #996;
     text-decoration: none;
 }
 
@@ -84,8 +84,6 @@ blockquote {
 /* Other Settings*/
 
 #banner {
-    /* transition: top 0.3s; */
-    /* Add transition for smooth animation */
     position: fixed;
     width: 100%;
     z-index: 9999;
@@ -102,13 +100,6 @@ blockquote {
     background: linear-gradient(to bottom, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#abab83', endColorstr='#a1a172', GradientType=0);
 }
-
-
-/* .hide {
-    .hide {
-        transform: translateY(-100%);
-    } 
-    /* Hides the banner by moving it off the viewport */
 
 #banner h1 {
     font-size: 32px;
@@ -226,18 +217,15 @@ ul#topnav li a:hover {
 }
 
 #content {
-    padding-top: 100px;
     text-align: left;
     padding: 20px;
-    width: 750px;
     padding-left: 200px;
+    margin-right: 245px;
 }
 
 #content h1 {
     font: normal 18px Arial, sans-serif;
-    font-weight: bold;
-    padding-left: 40%;
-    color: #0c13ed;
+    padding: 0;
 }
 
 #content ul {
@@ -251,7 +239,7 @@ ul#topnav li a:hover {
 
 #content ul li:before {
     content: "\00BB  ";
-    color: rgb(51, 0, 255);
+    color: #996;
 }
 
 #content .item {
@@ -263,20 +251,10 @@ ul#topnav li a:hover {
     text-align: justify;
 }
 
-#content .item b {
-    text-align: justify;
-    color: red;
-}
-
 #content .item span {
     background-color: inherit;
     color: #999;
     font-size: 11px;
-}
-
-#content .item img {
-    width: 750px;
-    height: 500px;
 }
 
 #footer {
@@ -416,8 +394,8 @@ ul#topnav li a:hover {
     #content {
         margin-right: 33%;
     }
-    #content .item h1 {
-        font-size: 20px;
+    #content h1 {
+        font-size: 14px;
         font-weight: bold;
     }
     #content .item span {

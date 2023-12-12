@@ -84,8 +84,6 @@ blockquote {
 /* Other Settings*/
 
 #banner {
-    /* transition: top 0.3s; */
-    /* Add transition for smooth animation */
     position: fixed;
     width: 100%;
     z-index: 9999;
@@ -102,13 +100,6 @@ blockquote {
     background: linear-gradient(to bottom, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#abab83', endColorstr='#a1a172', GradientType=0);
 }
-
-
-/* .hide {
-    .hide {
-        transform: translateY(-100%);
-    } 
-    /* Hides the banner by moving it off the viewport */
 
 #banner h1 {
     font-size: 32px;
@@ -226,7 +217,7 @@ ul#topnav li a:hover {
 }
 
 #content {
-    padding-top: 100px;
+    margin-top: 100px;
     text-align: left;
     padding: 20px;
     width: 750px;
@@ -246,13 +237,15 @@ ul#topnav li a:hover {
 
 #content ul li {
     padding: 2px 0 2px 10px;
+    list-style-type: decimal;
     margin: 0;
 }
 
-#content ul li:before {
+
+/* #content ul li:before {
     content: "\00BB  ";
     color: rgb(51, 0, 255);
-}
+} */
 
 #content .item {
     line-height: 1.25em;
@@ -272,6 +265,10 @@ ul#topnav li a:hover {
     background-color: inherit;
     color: #999;
     font-size: 11px;
+}
+
+#content.item .verification {
+    margin-top: 100px;
 }
 
 #content .item img {
