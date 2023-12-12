@@ -76,11 +76,9 @@ blockquote {
 /* Other Settings*/
 
 #banner {
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-    top: 0;
-    height: 100px;
+    position: relative;
+    padding: 10px;
+    height: 175px;
     border: 0px;
     color: #fff;
     background: #abab83;
@@ -209,11 +207,10 @@ ul#topnav li a:hover {
 }
 
 #content {
-    margin-top: 100px;
     text-align: left;
     padding: 20px;
     width: 750px;
-    padding-left: 250px;
+    padding-left: 200px;
 }
 
 #content h1 {
@@ -436,26 +433,27 @@ ul#topnav li a:hover {
 .code-box {
     height: 600px;
     width: 100%;
-    margin: 20px 0px;
+    border: 2px solid red;
+    margin: 30px 0px;
 }
 
 .code-box .topic {
     font-size: 18px;
     font-weight: 600;
-    color: #fc5d8a;
+    color: #265df2;
     margin: 4px;
 }
 
 .code-box textarea {
     height: 75%;
-    width: 95%;
-    padding: 20px;
-    font-size: 12px;
-    font-weight: 200;
+    width: 100%;
+    padding: 30px;
+    font-size: 15px;
+    font-weight: 400;
     outline: none;
-    border: 1px solid #fc5d8a;
-    border-radius: 2px 10px;
-    background: #d7f2a0c4;
+    border: 1px solid #265df2;
+    border-radius: 8px;
+    background: #e7edfe;
 }
 
 .code-box textarea::-webkit-scrollbar {
@@ -463,10 +461,10 @@ ul#topnav li a:hover {
 }
 
 .code-box button {
-    height: 30px;
-    width: auto;
+    height: 45px;
+    width: 155px;
     color: #fff;
-    background: #629326;
+    background: #265df2;
     outline: none;
     border: none;
     border-radius: 8px;
@@ -478,7 +476,7 @@ ul#topnav li a:hover {
 }
 
 .code-box button:hover {
-    background: #fc5d8a;
+    background: #0e4bf1;
 }
 
 @media (max-width: 400px) {

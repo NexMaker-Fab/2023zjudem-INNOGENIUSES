@@ -76,11 +76,9 @@ blockquote {
 /* Other Settings*/
 
 #banner {
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-    top: 0;
-    height: 100px;
+    position: relative;
+    padding: 10px;
+    height: 175px;
     border: 0px;
     color: #fff;
     background: #abab83;
@@ -209,11 +207,10 @@ ul#topnav li a:hover {
 }
 
 #content {
-    margin-top: 100px;
     text-align: left;
     padding: 20px;
     width: 750px;
-    padding-left: 250px;
+    padding-left: 200px;
 }
 
 #content h1 {
@@ -433,56 +430,36 @@ ul#topnav li a:hover {
 
 /* CodeBox CSS */
 
-.code-box {
-    height: 600px;
+.code-boxes {
+    height: 100%;
     width: 100%;
-    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid green;
 }
 
-.code-box .topic {
-    font-size: 18px;
-    font-weight: 600;
-    color: #fc5d8a;
-    margin: 4px;
+.code-boxes .code-box {
+    height: 450px;
+    width: 100%;
+    margin: 50px 0px;
+    border: 2px solid red;
 }
 
-.code-box textarea {
-    height: 75%;
-    width: 95%;
-    padding: 20px;
-    font-size: 12px;
-    font-weight: 200;
-    outline: none;
-    border: 1px solid #fc5d8a;
-    border-radius: 2px 10px;
-    background: #d7f2a0c4;
+.code-boxes .code-box .topic {
+    font-size: 30px;
+    font-weight: 800;
+    border: 2px solid cornflowerblue;
 }
 
-.code-box textarea::-webkit-scrollbar {
-    display: none;
+.code-boxes .code-box textarea {
+    height: 100%;
+    width: 100%;
+    border: 2px solid yellow;
 }
 
-.code-box button {
-    height: 30px;
-    width: auto;
-    color: #fff;
-    background: #629326;
-    outline: none;
-    border: none;
-    border-radius: 8px;
-    font-size: 17px;
-    font-weight: 400;
-    margin: 8px 0;
-    cursor: pointer;
-    transition: all 0.4s ease;
-}
 
-.code-box button:hover {
-    background: #fc5d8a;
-}
-
-@media (max-width: 400px) {
-    .code-box button {
+/* @media (max-width: 400px) {
+    .code-boxes .code-box button {
         width: 100%;
     }
-}
+} */
