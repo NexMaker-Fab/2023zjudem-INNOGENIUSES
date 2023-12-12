@@ -812,15 +812,6 @@ footer .wrapper {
         align-items: center;
         gap: 10px;
     }
-<<<<<<< HEAD
-    
-    .hero .btn-group .FButton {
-        color: #fff;
-    }
-    
-    .hero .right {
-        display: none;
-=======
     .social-link .icon-box {
         width: 45px;
         height: 45px;
@@ -830,7 +821,6 @@ footer .wrapper {
         justify-content: center;
         align-items: center;
         font-size: 22px;
->>>>>>> 95cf0162a00372995ae226ebe7d63c53b3b05754
     }
     .social-link .discord {
         color: hsl(235, 86%, 65%);
