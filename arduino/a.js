@@ -12,3 +12,17 @@ document.addEventListener("DOMContentLoaded", function() {
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
     }, false);
 });
+
+
+
+
+
+
+// Code BOx JS Code
+let codeBox = document.getElementById("codeBox");
+let codeButton = document.getElementById("codeButton");
+codeButton.onclick = function() {
+    codeBox.select();
+    document.execCommand("copy");
+    codeButton.innerText = "Codes Copied";
+};

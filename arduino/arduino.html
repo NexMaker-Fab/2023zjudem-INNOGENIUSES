@@ -258,51 +258,101 @@
                                     <li>250 Ω Potentiometer </li>
                                 </ul>
 
-                                <img src="img/1st.png" height="500px" width="800px" <figure>
+                                <img src="img/d (1).png" <figure>
                                 <p>Image 1: From the search bar, choose Arduino, breadboard, LCD, ultrasonic, and potentiometer.
                                 </p>
                                 </figure>
-                                <img src="img/2nd.png" height="500px" width="800px" <figure>
+                                <img src="img/d (2).png" <figure>
                                 <p>Image 2: First, attach GND and VCC (positive and negative sites) of Arduino to the breadboard ( Negative Site ). Attach the LCD now, and adjust the value of resistance 330 whom by connecting the resistance LCD cathode,
                                     GND to the Bread Boad GND Negative terminal, and VCC pin to the Breadboad VCC Positive terminal. Then connect to GND, as well as the potentiometer to VCC, the second terminal to GND, and the middle pin to the LCD's
                                     V0 pin. Connect the RW pin to GND (negative), the E pin to the Arduino's 9th pin, the DB4 pin to the eighth pin, the DB5 pin to the 7th, the DB6 pin to the 6th, and the final pin, DB7, to the 5th pin of the Arduino.
                                     LCD Pin 5 is finished.</p>
                                 </figure>
 
-                                <img src="img/3rd.png" height="500px" width="800px" <figure>
+                                <img src="img/d (3).png" <figure>
                                 <p>Image 3: Select LCD </p>
                                 </figure>
 
-                                <img src="img/4th.png" height="500px" width="800px" <figure>
+                                <img src="img/d (4).png" <figure>
                                 <p>Image 4: search the Ultrasonic distance</p>
                                 </figure>
 
-                                <img src="img/5th.png" height="500px" width="800px" <figure>
+                                <img src="img/d (5).png" <figure>
                                 <p>Image 5: take Potentiometer from search bar and also take one Resistance</p>
                                 </figure>
 
-                                <img src="img/6th.png" height="500px" width="800px" <figure>
+
+
+
+
+
+                                <div class="code-boxes">
+                                    <div class="code-box codeBox">
+                                        <div class="topic">Code:</div>
+                                        <textarea id="codeBox" readonly>
+#include <LiquidCrystal.h>
+LiquidCrystal lcd = LiquidCrystal(10,9,8,7,6,5); // Create an LCD object. Parameters: (RS, E, D4, D5, D6, D7):
+const int trigPin = 12;
+const int echoPin = 11;
+float time, distance;
+void setup() 
+{
+lcd.begin(16, 2); // Specify the LCD's number of columns and rows. Change to (20, 4) for a 20x4 LCD
+pinMode(trigPin, OUTPUT);  
+pinMode(echoPin, INPUT);  
+Serial.begin(9600);
+ }
+                                                
+void loop() 
+{
+digitalWrite(trigPin, LOW);  
+delayMicroseconds(10);  
+digitalWrite(trigPin, HIGH);  
+delayMicroseconds(10);  
+digitalWrite(trigPin, LOW);  
+                                                
+time = pulseIn(echoPin, HIGH);
+                                                
+distance = (time*.0343)/2;  
+                                                
+ // For Serial Monitor
+Serial.print("Distance:CM ");  
+Serial.println(distance);  
+                                                
+ // For LCD Display
+lcd.setCursor(0,0);
+lcd.print("Distance in CM");
+ lcd.setCursor(0,1);
+lcd.print(distance);
+                                                
+}                                       
+                                           
+                                           
+    </textarea>
+                                        <button id="codeButton">Copy Codes</button>
+                                    </div>
+                                </div>
+
+                                <p></p>
+                                <img src="img/d (6).png" <figure>
                                 <p>Image 6: Now open the code option and select the “text” option and write down on your code and Launch the simulation now</p>
                                 </figure>
-                                <img src="img/7th.png" height="500px" width="800px" <figure></figure>
+                                <img src="img/d (7).png" </figure>
                                 <p>Image 7:observe that the potentiometer's LCD is printing on the display</p>
                                 </figure>
 
-                                <img src="img/8th.png" height="500px" width="800px" <figure>
+                                <img src="img/d (8).png" <figure>
                                 <p>Image 8: When the optical distance from the ultrasonic sensor is great, the value is decreasing, and when the optical distance from the ultrasonic censor is close, the value is increasing
                                 </p>
                                 </figure>
 
-                                <img src="img/9th.png" height="500px" width="800px" <figure>
-                                <p>Image 9: copy the code from the Tinker CAD into the Arduino IDE. And insert the code into the Arduino IDE software. Next, use the data cable to upload the code to the Arduino Uno after checking it</p>
-                                </figure>
-                                <h3>Code</h3>
+
                                 <p></p>
-                                <img src="img/10th.jpg" height="500px" width="800px" <figure>
+                                <img src="img/10th.jpg" <figure>
                                 <p>Image 10: Project Implementation</p>
                                 </figure>
 
-                                <video width="320" height="240" controls>
+                                <video width="800" height="500" controls>
                             <source src="img/Short video.mp4" type="video/mp4">
                             <p>video: Project Implementation </p>
                           
