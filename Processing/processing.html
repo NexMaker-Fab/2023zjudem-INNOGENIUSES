@@ -198,132 +198,76 @@
                             <ul>
                                 <h3>Hardware required:</h3>
                                 <li>Arduino Nano</li>
-                                <li>DHT22</li>
+                                <li>DHT11 but you can use DHT22 or another sensor</li>
                                 <li>Breadboard</li>
                                 <li>Wires</li>
                                 <h3>Hardware required:</h3>
                                 <li><a href="https://www.arduino.cc/en/software">Arduino IDE</a></li>
                                 <li><a href="https://processing.org/download">Processing</a></li>
                                 <h3>Technical specification: </h3>
-                                <h3>DHT22 Technical Specs:</h3>
-                                <li>Power supply: 3.3 - 5.5 V DC</li>
-                                <li>Output signal: Digital signal via 1-wire bus</li>
-                                <li>Operating range: Humidity 0-100 %RH; Temperature -40 - 80 °C</li>
-                                <li>Accuracy: Humidity +-2 %RH (Max +-5%RH); Temperature +-0.5 °C</li>
+                                <h3>DHT11 Technical Specs:</h3>
+                                <li>Low cost</li>
+                                <li>5mA max current use during conversion (while requesting data)</li>
+                                <li>Good for 0-50°C temperature readings ±2°C accuracy</li>
+                                <li>Good for 20-80% humidity readings with 5% accuracy</li>
+                                <li>No more than 1 Hz sampling rate (once every second)</li>
+                                <li>Body size 15.5mm x 12mm x 5.5mm</li>
 
                             </ul>
-                            <h2>DHT22 Pin configuration:</h2>
-                            <img src="img/a (1).png" <figure>
+                            <h2>DHT Pin configuration:</h2>
+                            <img src="img/c1.png" <figure>
                             <p></p>
                             </figure>
-                            <h2>DHT22 Pin configuration:</h2>
-                            <img src="img/a (1).png" <figure>
+                            <h2>Component Picture</h2>
+                            <img src="img/c2.jpg" <figure>
                             <p></p>
                             </figure>
+
                             To set up the hardware, you will need an Arduino board and a DHT sensor like DHT11 or DHT22. Also use things called breadboard and jumper wires for it. The sensor is linked to the Arduino as shown in the diagram found online. After setting up the hardware,
                             you need to write code on an Arduino so it can read data from a sensor. Then make a graphic User Interface in Processing that shows temperature and humidity values coming into your computer through the wires of our little helper
                             device called Arduino's serial port. In Processing, you have to add the "meter" library. This is simple: just go into the library manager and look for "meter", then install it. The code for the Arduino and Processing sketch
                             that shows temperature and humidity is in resources. It's made to show those values right away. This project doesn't need lots of knowledge about writing code, and the resources given walk you through step by-step on how to
                             make a user interface with things like Arduino and Processing for seeing temperature changes.
-                            <h3>Processing Code:</h3>
-                            <p>Open Processing<br> Download meter from library as you can see in the picture below:</p>
-                            <img src="img/1.png" <figure>
+                            <h3>Arduino Code::</h3>
+                            <p>open Arduino IDE<br> Download meter from library as you can see in the picture below:</p>
+                            <img src="img/3.png" <figure>
                             <p></p>
                             </figure>
-                            <img src="img/2.png" <figure>
+                            <img src="img/4.png" <figure>
+                            <p>By following this step you can download our required library for DHT11 or DHT22 according to your sensor</p>
+                            </figure>
+                            <p>By following this step you can download our required library for DHT11 or DHT22 according to your sensor</p>
+                            <img src="img/5.jpg" <figure>
                             <p></p>
+                            </figure><img src="img/6.png" <figure>
+                            <p>After open the DHT default environment you need to change couple of things as you see in the picture below or you can check the code from code section.</p>
                             </figure>
                             <div class="code-boxes">
                                 <div class="code-box codeBox">
                                     <div class="topic">Code:</div>
                                     <textarea id="codeBox" readonly>
- //Create a meter
-
-import meter.*; //import the meter from library
-                                                    
-import processing.serial.*; // import serial library
-Serial port; //Declare port
-                                                    
-Meter Tm , Hm; //initial a object
-                                                    
-void setup(){
-size(1000,500);  //create a window
-background(240,248,255);  //set bgcolor r,g,b format
-windowTitle("Temp and Humadity Reader");  //Window Title
-                                                      
-//Create port
-port = new Serial(this, "COM8" , 9600); // this name of the port accroding to your system
-                                                      
- //Create Temperature Meter
-Tm = new Meter(this, 40, 100);  //set the meter position x & y cordinate
-                                                      
-//Decorate the meter
- Tm.setTitleFontSize(18);
-Tm.setTitleFontName("Arial bold");
-Tm.setTitle("Temp °C");
-                                                      
- // Change meter scale values
-String[] scaleLabelsTm = {"0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50",
-"55", "60", "65", "70", "75", "80", "85", "90", "95", "100",};
- Tm.setScaleLabels(scaleLabelsTm);
-Tm.setScaleFontSize(16);
-Tm.setScaleFontColor(color(171,39,79));
-                                                      
-                                                       
-Tm.setDisplayDigitalMeterValue(true);  //meter display value
-                                                      
-                                                      
-Tm.setArcColor(color(211,33,45));
-Tm.setArcThickness(10);
- Tm.setMaxScaleValue(100);
-Tm.setMinInputSignal(0);
- Tm.setMaxInputSignal(100);
-Tm.setNeedleThickness(2);
-                                                      
- //Create Humadity Meter as like Temperature Meter
- int Hmx = Tm.getMeterX(); 
-int Hmy = Tm.getMeterY(); 
- int Hmw = Tm.getMeterWidth();
-                                                      
- Hm = new Meter(this, Hmx + Hmw + 20, Hmy);
-                                                      
-Hm.setTitleFontSize(18);
- Hm.setTitleFontName("Arial bold");
-Hm.setTitle("Humidity (%)");
-                                                      
-// Change meter scale values
-String[] scaleLabelsHm = {"0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100",};
- Hm.setScaleLabels(scaleLabelsHm);
-Hm.setScaleFontSize(16);
-Hm.setScaleFontColor(color(171,39,79));
-                                                      
-                                                       
-Hm.setDisplayDigitalMeterValue(true);  //meter display value
-                                                      
-                                                      
-Hm.setArcColor(color(211,33,45));
-Hm.setArcThickness(10);
-Hm.setMaxScaleValue(100);
-Hm.setMinInputSignal(0);
-Hm.setMaxInputSignal(100);
-Hm.setNeedleThickness(2);
-    }
-                                                    
-void draw(){
- textSize(25);
- fill(0,72,186);
- text("Digital Meter", 400, 30);
-   if (port.available() > 0){
-      String value = port.readString();
-                                                        
-        String[] list = split(value, ',');
-         float temp = float(list[0]);
-        float hum = float(list[1]);
-        Tm.updateMeter(int(temp));
-        Hm.updateMeter(int(hum));
-        println("Temperature: " + temp + " C  " + "Humidity: " + hum+ "%");
-   }
-}
+ #include "DHT.h"
+ #define DHTPIN 2 //connect DHT data pin to D2
+ #define DHTTYPE DHT11 // DHT 11
+ DHT dht(DHTPIN, DHTTYPE);
+ float temp = 0;
+ float hum = 0;
+ void setup() {
+ Serial.begin(9600);
+ pinMode(DHTPIN, OUTPUT);
+ dht.begin(); //Begins to receive Temperature and humidity values.
+                                        
+ }
+                                        
+ void loop() {
+ temp = dht.readTemperature();
+ hum = dht.readHumidity();
+ Serial.print(temp);
+ Serial.print(",");
+ Serial.print(hum);
+                                        
+ delay(1000);
+ }
                                                                                                                             
                                                    
                                                    
@@ -331,67 +275,123 @@ void draw(){
                                     <button id="codeButton">Copy Codes</button>
                                 </div>
                             </div>
+
+                            <p>This Code for Arduino to configure the hardware after that we need to write processing code for GUI visualize the data on our laptop screen. In my case i’m using java language in my processing part. I’m given everything below
+                                step by step :</p>
                             <p>Arduino Code:<br> open Arduino IDE<br> Download meter from library as you can see in the picture below:
                             </p>
-                            <img src="img/3.png" <figure>
+                            <h3>Processing Code:</h3>
+                            <p>Open Processing<br>Download meter from library as you can see in the picture below:</p>
+                            <img src="img/1.png" <figure>
                             <p></p>
                             </figure>
-                            <img src="img/4.png" <figure>
-                            <p>By following this step you can download our required library [SimpleDHT]</p>
+                            <img src="img/2.png" <figure>
+                            <p>After successfully installed the Meter library we can write some code to make meter and get data from our Arduino. You can follow our code :</p>
 
                             </figure>
-                            <p>After download and installed the library you can open default environment code for DHT by following the step i mentioned in picture</p>
-                            <img src="img/5.jpg" <figure>
-                            <p> </p>
-                            </figure>
-                            <img src="img/6.png" <figure>
-                            <p>After open the DHT default environment you need to change couple of things as you see in the picture below or you can check the code from code section.</p>
-                            </figure>
-                            <img src="img/7.png" <figure>
-                            <p> </p>
-                            </figure>
-                            <img src="img/8.png" <figure>
-                            <p> </p>
-                            </figure>
-                            <img src="img/9.png" <figure>
-                            <p>After changed all the simple things like bit rate and some demo output statement , you can write the code or change it as like the below code.</p>
-                            </figure>
+
                             <div class="code-boxes">
                                 <div class="code-box codeBox">
                                     <div class="topic">Code:</div>
                                     <textarea id="codeBox" readonly>
-#include <SimpleDHT.h>
-
-// for DHT22,
-// VCC: 5V or 3V
-// GND: GND
-// DATA: 2
-int pinDHT22 = 2;
-SimpleDHT22 dht22(pinDHT22);
-
-void setup() {
-Serial.begin(9600);
+// Import Meter library
+import meter.*;
+// Import serial library
+import processing.serial.*;
+                                        
+Serial port; // Define a port for getting data
+                                        
+Meter Tm, Hm;  //Create 2 meter for Temperature and Humadity
+                                        
+void setup(){
+// Create window for GUI 
+size(1000, 500); // Size of the window (width, height)
+ background(240,248,255); // BG-Color of window (R,G,B)
+                                          
+ // declare the port as your Arduino port to help get data
+port = new Serial(this, "COM4", 9600); //name of the port would be different for every device
+                                          
+ // TEMPERATURE METER
+Tm = new Meter(this, 50, 150);  //x and y coordinates of meter's upper left corner
+                                          
+Tm.setTitleFontSize(20);
+Tm.setTitleFontName("Arial bold");
+ Tm.setTitle("Temperature (C)");
+                                          
+  // Change meter scale values
+String[] scaleLabels = {"0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50"};
+Tm.setScaleLabels(scaleLabels);
+Tm.setScaleFontSize(16);
+ Tm.setScaleFontName("Times new roman bold");
+Tm.setScaleFontColor(color(175,0,42));
+                                          
+ // We can also display the value of meter
+Tm.setDisplayDigitalMeterValue(true);
+                                          
+ // Lets do some more modifications so our meter looks nice
+Tm.setArcColor(color(230, 0, 0));
+Tm.setArcThickness(10);
+                                          
+Tm.setMaxScaleValue(50);
+Tm.setMinInputSignal(0);
+Tm.setMaxInputSignal(50);
+Tm.setNeedleThickness(1);
+                                          
+// HUMIDITY METER
+ // lets take some refference from first meter
+int mx = Tm.getMeterX(); // x coordinate of Hm
+int my = Tm.getMeterY(); // y coordinate of Hm
+int mw = Tm.getMeterWidth();
+                                          
+ Hm = new Meter(this, mx + mw + 20, my);
+                                          
+ Hm.setTitleFontSize(20);
+ Hm.setTitleFontName("Arial bold");
+ Hm.setTitle("Humidity (%)");
+                                          
+ // Change meter scale values
+ String[] scaleLabels2 = {"0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"};
+  Hm.setScaleLabels(scaleLabels2);
+Hm.setScaleFontSize(16);
+Hm.setScaleFontName("Times new roman bold");
+Hm.setScaleFontColor(color(153,0,26));
+                                          
+//display the value of meter
+Hm.setDisplayDigitalMeterValue(true);
+                                          
+// This code will modify the default Meter design
+Hm.setArcColor(color(64,128,0));
+Hm.setArcThickness(10);
+                                          
+Hm.setMaxScaleValue(100);
+Hm.setMinInputSignal(0);
+Hm.setMaxInputSignal(100);
+  Hm.setNeedleThickness(1);
 }
-
-void loop() {
-// start working...
-
-// read without samples.
-// @remark We use read2 to get a float data, such as 10.1*C
-// if user doesn't care about the accurate data, use read to get a byte data, such as 10*C.
-float temperature = 0;
-float humidity = 0;
-int err = SimpleDHTErrSuccess;
-if ((err = dht22.read2(&temperature, &humidity, NULL)) != SimpleDHTErrSuccess) {
-Serial.print("Read DHT22 failed, err="); Serial.print(SimpleDHTErrCode(err));
-Serial.print(","); Serial.println(SimpleDHTErrDuration(err)); delay(2000);
-return;
-}
-Serial.print((float)temperature);
-Serial.print(" , "); // This line for ectract value in processing side
-Serial.println((float)humidity);
-// DHT22 sampling rate is 0.5HZ.
-delay(2500);
+                                        
+ void draw() {
+textSize(30);  //Title for our window
+fill(211,33,45); // Title font color (r,g,b)
+text("Temperature and Humidity", 300, 100); // ("text", x-cordinate, y-cordinate)
+                                        
+if (port.available() > 2) {
+String val = port.readString(); // read incoming string data on the serial port
+// First, split the temp and hum data
+String[] list = split(val, ','); // splits value separated by ','
+                                            
+// Check if the array has at least two elements [Temp & Hum Data]
+if (list.length >= 2) {
+float temp = float(list[0]); // first value is Temperature
+float hum = float(list[1]);  // second value is Humidity
+//updateMeter accepts only int values so convert data float to int
+Tm.updateMeter(int(temp)); // update temparature on Meter
+Hm.updateMeter(int(hum));  // update Humadity on Meter
+println("Temperature: " + temp + " °C  " + "Humidity: " + hum + "%");
+delay(1000);
+} else {
+println("Error: Not enough values received");  // somehow the sensor is unable to read data or send data to meter
+ }
+    }
 }
                                                                         
                                                                                 
@@ -399,6 +399,37 @@ delay(2500);
                                     <button id="codeButton">Copy Codes</button>
                                 </div>
                             </div>
+                            <p>This code is written for DHT11 You can also try DHT22 , it might work for both sensor. You can see the code and you will understand , cause i’m given comment beside of my codes. But remember that to change th e port name according
+                                to your Arduino port. You can check it from your Arduino IDE in tools section . Or you can follow the below picture.</p>
+                            <img src="img/3.png" <figure>
+                            <p></p>
+                            </figure>
+                            <h3>Hardware Setup:</h3>
+                            <p>We finished all the code we need. Now, we can setup hardware and run the code. I already mentioned all the required hardware above but for your help i will give the real field picture below:</p>
+                            <img src="img/3.png" <figure>
+                            <p>Here is the basic hardware we need. [DHT11,Breadboard,3 wires, Arduino Uno]. In your case you can replace hardware like DHT22 and Arduino Nano. No let’s connect the wires according to the picture.</p>
+                            </figure>
+                            <ul>
+                                <li> 1st wire should be Vcc[5v/3.3v]</li>
+                                <li> 2nd wire connect with Pin 2 [Arduino Uno] / D2 [Arduino Nano</li>
+                                <li>3rd wire no connection</li>
+                                <li>Last pic will connect in GND</li>
+                            </ul>
+                            <img src="img/11.png" <figure>
+                            <p> </p>
+                            </figure>
+                            <img src="img/12.png" <figure>
+                            <p> </p>
+                            </figure>
+                            <img src="img/c9.gif" <figure>
+                            <p>All the setup is done , Now time to connect your Arduino device with your laptop or Desktop whatever you use. And you can follow the video below for real time practical demonstration.</p>
+                            </figure>
+                            <p>I'm going to tell you how the circuit schematic works, which connects everything. I will explain it in a minute. I have used a USB cable to connect my Arduino board with my laptop. I started the Processing software when I connected
+                                Arduino to my laptop. I just needed to press the play button for the code to start working. Right now, the heat measurement, Humidity level readings are shown on dials.
+
+                                <br> I then heated the DHT11 Temperature and Humidity Sensor by myself using a glass of Hot water as you see in the video. The DHT11 is a very slow sensor; it needs time to update the values. The needle on the meter started
+                                to shift after I kept using heat on the sensor for almost ten seconds. I was really happy in that moment. Then, since I was using a 2000 millisecond break in the Arduino code.</p>
+
 
 
 
@@ -413,7 +444,9 @@ delay(2500);
                             <h1>Reference</h1>
                             <ul>
                                 <li><a href="https://www.nexmaker.com/">NexMaker-Fab</li>
-                                    <li><a href="https://www.flashforge.com/download-center">Flashforge</a></li>
+                                    <li><a href="https://www.hackster.io/">Hackster</a></li>
+                                <li><a href="https://www.electroniclinic.com/arduino-sensor-values-on-gauges-designed-in-processing-software-sensors-dashboard/">Electronic Clinic
+                                        </a></li>
                                 <!-- <li><a href="http://www.taichi-maker.com/">太极创客</a></li>
                                 <li><a href="https://learn.adafruit.com/dht">adafruit</a></li>
                                 <li><a href="https://www.javatpoint.com/arduino">javaTpoint</a></li> -->
