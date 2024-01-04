@@ -236,7 +236,7 @@ ul#topnav li a:hover {
 #content h1 {
     font: normal 18px Arial, sans-serif;
     font-weight: bold;
-    padding-left: 40%;
+    text-align: center;
     color: #0c13ed;
 }
 
