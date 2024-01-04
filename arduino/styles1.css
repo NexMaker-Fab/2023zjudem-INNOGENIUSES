@@ -260,6 +260,12 @@ ul#topnav li a:hover {
     margin: 0;
 }
 
+#flex-img {
+    display: flex;
+    flex-flow: row;
+    align-content: space-between;
+}
+
 #content .item p {
     text-align: justify;
 }
