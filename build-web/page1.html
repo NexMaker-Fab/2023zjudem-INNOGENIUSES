@@ -23,19 +23,20 @@
             <!--start header-->
             <div id="banner">
                 <h1>HOW TO BUILD <em>WEB</em> </h1>
-                <p></p>
-                <!-- menu -->
+
+
                 <label for="show-menu" class="responsive">&#9776;</label>
                 <input type="checkbox" id="show-menu" role="button">
                 <ul id="topnav">
                     <li><a class="active">Tools Prepare</a></li>
                     <li><a href="#settings" class="nav-link">Local settings</a></li>
                     <li><a href="#howtodo" class="nav-link">How to write the Frist document</a></li>
+                    <li><a href="#banner1" class="nav-link">How to Make Taskbar</a></li>
                     <li><a href="#directory" class="nav-link">Project Directory Structure</a></li>
                     <li><a href="#collaborate" class="nav-link">Team collaborate</a></li>
 
                 </ul>
-                <!-- end menu -->
+
             </div>
             <!--end of header-->
             <!--start sidebar-->
@@ -1769,8 +1770,129 @@ text-decoration: underline;
                                 </ol>
                             </p>
                         </div>
+                        <div id="banner1">
+                            <h3>STEP 16:how to make the taskbar</h3>
+                            <img src="img/banner.png" style="width:100%; height:120%;" <figure>
+                            </figure>
+                            <p>The elements are structured to create a header section that includes a title, a responsive menu icon, and a navigation menu with links to different web page sections. The 'div' acts as a container to hold these elements and
+                                manage their layout or styling.'' ul id=" top nav": This is an unordered list (ul) with an ID "top nav" used to create a navigation menu. List Items 'li' These are individual list items within the navigation menu, each
+                                containing an anchor element 'a' representing a link to different website sections.</p>
+
+                            <div class="code-box codeBox">
+                                <div class="topic">HTML code for taskber:</div>
+                                <textarea id="codeBox" readonly>
+<div id="banner">
+  <h1>HOW TO BUILD <em>WEB</em> </h1>
+                        
+                        
+  <label for="show-menu" class="responsive">&#9776;</label>
+   <input type="checkbox" id="show-menu" role="button">
+   <ul id="topnav">
+        <li><a class="active">Tools Prepare</a></li>
+        <li><a href="#settings" class="nav-link">Local settings</a></li>
+        <li><a href="#howtodo" class="nav-link">How to write the Frist document</a></li>
+        <li><a href="#banner1" class="nav-link">How to Make Taskbar</a></li>
+        <li><a href="#directory" class="nav-link">Project Directory Structure</a></li>
+        <li><a href="#collaborate" class="nav-link">Team collaborate</a></li>
+                        
+   </ul>
+                        
+</div>
+                                </textarea>
+
+                            </div>
+                            <div class="code-box codeBox">
+                                <div class="topic">CSS code for taskber:</div>
+                                <textarea id="codeBox" readonly>
+#banner {
+position: fixed;
+width: 100%;
+z-index: 9999;
+top: 0;
+height: 100px;
+border: 0px;
+color: #fff;
+background: #abab83;
+background: -moz-linear-gradient(top, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #abab83), color-stop(0%, #abab83), color-stop(50%, #abab83), color-stop(51%, #a1a172), color-stop(100%, #a1a172));
+background: -webkit-linear-gradient(top, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
+background: -o-linear-gradient(top, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
+background: -ms-linear-gradient(top, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
+background: linear-gradient(to bottom, #abab83 0%, #abab83 0%, #abab83 50%, #a1a172 51%, #a1a172 100%);
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#abab83', endColorstr='#a1a172', GradientType=0);
+}
+                                    
+#banner h1 {
+    font-size: 32px;
+ }
+                                    
+#banner h1 em {
+    font-style: normal;
+     text-decoration: none;
+    color: #111;
+ }
+                                    
+#show-menu {
+    display: none;
+}
+                                    
+.responsive {
+    background-color: inherit;
+    color: #fff;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.5em;
+    padding: 0;
+    position: absolute;
+    top: 80%;
+    display: none;
+}
+                                    
+ul#topnav {
+    list-style-type: none;
+    margin: 0 0 0 1%;
+    display: table;
+    padding: 0;
+    overflow: hidden;
+     width: 60%;
+    position: absolute;
+    bottom: 0;
+}
+                                    
+ul#topnav li {
+    display: table-cell;
+    text-align: center;
+}
+                                    
+ul#topnav li a {
+    background: #333;
+    color: #999;
+    border: none;
+    display: block;
+    margin-right: 5px;
+    padding: 5px 0px;
+    text-decoration: none;
+    font-size: 12px;
+}
+                                    
+ul#topnav li a.active,
+ul#topnav li a.active:hover {
+    background: #fff;
+    color: #333;
+}
+                                    
+ul#topnav li a:hover {
+      background: #cc9;
+color: #111;
+}
+                                </textarea>
+
+                            </div>
+
+
+                        </div>
                         <div id="directory">
-                            <h3> STEP 16:Project Directory Structure</h3>
+                            <h3> STEP 17:Project Directory Structure</h3>
                             <p>This is a directory structure for the "2023zjudem-INNOGENIUSES" project, organizing files into folders such as "js" for JavaScript files, "img" for images, and specific folders for different project aspects like "arduino,"
                                 "Build-web," and "Computer-aided-design," each containing relevant files for their respective purposes. The project includes HTML, CSS, and JavaScript files along with image assets, facilitating various components of the
                                 project development</p>
@@ -1793,7 +1915,7 @@ text-decoration: underline;
                         </div>
 
                         <div class="Team collaborate" id="collaborate">
-                            <h3>STEP 16: How to collaborate with team</h3>
+                            <h3>STEP 18: How to collaborate with team</h3>
                             <h4>1.Inviting a team or person</h4>
                             <p>Phase 1: Request the username of the individual you're inviting to collaborate.</p>
 
