@@ -390,6 +390,60 @@ lcd.print(distance);
                                 <img src="img/m1.jpg" <figure>
                                 <p></p>
                                 </figure>
+                                <div class="code-boxes">
+                                    <div class="code-box codeBox">
+                                        <div class="topic">Code:</div>
+                                        <textarea id="codeBox" readonly>
+Code:
+
+ library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+                                            
+entity LightSeekingRobot is
+Port ( CLK : in STD_LOGIC;
+           RESET : in STD_LOGIC;
+           LIGHT_SENSOR : in STD_LOGIC;
+           LEFT_MOTOR : out STD_LOGIC;
+           RIGHT_MOTOR : out STD_LOGIC);
+           end LightSeekingRobot;
+                                            
+   architecture Behavioral of LightSeekingRobot is
+signal light_error : STD_LOGIC_VECTOR (3 downto 0) := "0000"; -- Adjust size based on requirements
+signal proportional_control : STD_LOGIC := '0';
+                                            
+constant KP : STD_LOGIC_VECTOR (3 downto 0) := "1000"; -- Proportional gain, adjust as needed
+ constant THRESHOLD : STD_LOGIC_VECTOR (3 downto 0) := "0100"; -- Threshold for motor control, adjust as needed
+                                            
+     begin
+     process (CLK, RESET)
+     begin
+         if RESET = '1' then
+          light_error <= "0000";
+          proportional_control <= '0';
+         elsif rising_edge(CLK) then
+-- Calculate proportional control error
+ light_error <= LIGHT_SENSOR xor "1111";
+                                            
+  -- Proportional control
+proportional_control <= '1' when light_error > THRESHOLD else '0';
+                                            
+-- Motor control logic (adjust based on your motor configuration)
+ LEFT_MOTOR <= '1' when proportional_control = '1' else '0';
+RIGHT_MOTOR <= '1' when proportional_control = '0' else '0';
+      end if;
+end process;
+                                            
+end Behavioral;
+                                                                                   
+                                           
+                                           
+    </textarea>
+                                        <button id="codeButton">Copy Codes</button>
+                                    </div>
+                                </div>
+
                                 <h3>Step 1: How to Create Project</h3>
                                 <img src="img/m2.jpg" <figure>
                                 <p></p>
@@ -560,12 +614,14 @@ lcd.print(distance);
                             <div id="reference">
                                 <h1>Reference</h1>
                                 <ul>
-                                    <li><a href="https://www.nexmaker.com/">NexMaker-Fab</li>
-                                    <li><a href="https://www.arduino.cc/">Arduino.cc</a></li>
-                                    <li><a href="http://www.taichi-maker.com/">太极创客</a></li>
-                                    <li><a href="https://learn.adafruit.com/dht">adafruit</a></li>
-                                    <li><a href="https://www.javatpoint.com/arduino">javaTpoint</a></li>
-                                    <li><a href="https://www.instructables.com/How-to-Get-Started-With-Vivado-/">Vivado HLs 2015.4</a></li>
+                                    <li><a href="https://www.nexmaker.com/">https://www.nexmaker.com/</li>
+                                    <li><a href="https://www.arduino.cc/">https://www.arduino.cc/</a></li>
+                                    <li><a href="http://www.taichi-maker.com/">http://www.taichi-maker.com/</a></li>
+                                    <li><a href="https://learn.adafruit.com/dht">https://learn.adafruit.com/dht</a></li>
+                                    <li><a href="https://www.javatpoint.com/arduino">https://www.javatpoint.com/arduino</a></li>
+                                    <li><a href="https://www.instructables.com/Light-Seeking-Mobile-Robot-BASYS-3-VHDL/">https://www.instructables.com/Light-Seeking-Mobile-Robot-BASYS-3-VHDL/
+                                    </a></li>
+                                    <li><a href="https://www.instructables.com/How-to-Get-Started-With-Vivado-/">https://www.instructables.com/How-to-Get-Started-With-Vivado-/</a></li>
 
                                 </ul>
                             </div>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="Description" lang="en" content="open source x/html and css templates"> -->
+    <meta name="author" content="mlp design">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <!--start wrapper-->
+    <div id="wrapper">
+
+        <!--start body-->
+        <div id="body">
+
+            <!--start header-->
+            <div id="banner">
+                <h1>Internet of <em>things</em> </h1>
+                <p></p>
+                <!-- menu -->
+                <label for="show-menu" class="responsive">&#9776;</label>
+                <input type="checkbox" id="show-menu" role="button">
+                <ul id="topnav">
+                    <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                    <li><a href="#components" class="nav-link">IoT components</a></li>
+                    <li><a href="#led" class="nav-link">Blink LED</a></li>
+                    <li><a href="#humidity" class="nav-link"> ThingSpeak IoT</a></li>
+                    <li><a href="#reference" class="nav-link">Reference</a></li>
+                </ul>
+                <!-- end menu -->
+            </div>
+            <!--end of header-->
+            <!--start sidebar-->
+
+            <div id="container">
+
+                <!--start content-->
+                <div id="content">
+                    <!--post item-->
+                    <div class="item">
+                        <div id="introduction">
+                            <h1>Introduction of IoT</h1>
+
+                            <img src="img/IOT-4.png" <figure>
+                            <p></p>
+                            </figure>
+                            <p>The Internet of Things (IoT) refers to the network of physical objects or "things" that are embedded with sensors, software, and other technologies to connect and exchange data with other devices and systems over the internet.
+                                These interconnected devices can range from everyday household items such as refrigerators and thermostats to industrial machines, vehicles, and wearable devices. The primary goal of IoT is to enable these objects to collect
+                                and share data, allowing them to be monitored, controlled, and, in some cases, automated. This data exchange between devices can lead to more efficient processes, improved decision-making, and the development of new services
+                                and applications.
+                            </p>
+
+                        </div>
+                        <div id="components">
+                            <h1>Key components of an IoT system include:</h1>
+                            <img src="img/Key-IoT-Components.jpg" <figure>
+                            <p></p>
+                            </figure>
+                            <ul>
+                                <li>Things/Devices: Physical objects or devices embedded with sensors, actuators, and other technologies to collect and transmit data.
+                                </li>
+                                <li>Connectivity: The communication infrastructure that allows devices to connect to the internet and communicate with each other. This can include wired and wireless technologies.
+                                </li>
+                                <li>Data Processing: The analysis and processing of the data collected by IoT devices, often done in cloud or edge computing environments.
+                                </li>
+                                <li>User Interface: Interfaces through which users can interact with and control IoT devices, often through applications or web portals.
+                                </li>
+                                <li>Security: Measures to protect the data, privacy, and functionality of IoT systems, as these systems involve the exchange of sensitive information.
+                                </li>
+                                <p>IoT has applications in various fields, including smart homes, healthcare, agriculture, transportation, industrial automation, and more. As the technology continues to advance, the scope and impact of IoT are expected to
+                                    grow, leading to more connected and intelligent systems.</p>
+                            </ul>
+
+                        </div>
+                        <div id="led">
+                            <h1>Blink LED using Arduino Cloud IOT</h1>
+                            <p>To blink an LED using NodeMCU ESP8266 and Arduino Cloud, start by setting up an Arduino Cloud account and creating a "Thing" representing your NodeMCU board. Configure a widget in the cloud dashboard for controlling the LED.
+                                In the Arduino IDE, include the required libraries, define the LED pin, and create a callback function to toggle the LED based on cloud changes. Initialize cloud properties and set up the connection with the NodeMCU. Connect
+                                the LED and resistor in series to a digital pin and GND on the NodeMCU. Upload the code to the NodeMCU via the Arduino IDE. Finally, test the LED control through the cloud dashboard by toggling the widget associated with
+                                the LED, witnessing the LED blink according to the cloud commands. Always exercise caution with electrical connections and components.
+                            </p>
+                        </div>
+
+                        <h2>Hardware Required:</h2>
+                        <img src="img/co1.png" <figure>
+                        <p></p>
+                        </figure>
+                        <ul>
+                            <li>NodeMCU ESP8266</li>
+                            <li>LED</li>
+                            <li>Resistor (220-1k ohm)</li>
+                            <li>Breadboard</li>
+                            <li>Connecting wires</li>
+                        </ul>
+                        <h2>Steps:</h2>
+                        <h3>1. Set Up Arduino Cloud:</h3>
+                        <img src="img/a1.png" <figure>
+                        <p>Create an Account: Sign up for an account on Arduino Cloud (create.arduino.cc).</p>
+                        </figure>
+                        <img src="img/a2.png" <figure>
+                        <p>Create a New "Thing": Log in to your Arduino Cloud account and create a new "Thing." Name it appropriately (e.g., "LED_Blink").</p>
+                        </figure>
+                        <img src="img/a3.png" <figure>
+                        <p>Create a New "Thing": Log in to your Arduino Cloud account and create a new "Thing." Name it appropriately (e.g., "Control Led").</p>
+                        </figure>
+                        <img src="img/a4.png" style="width: fit-content;height: 80%;" <figure>
+                        <p>Add Device: Add your NodeMCU ESP8266 as a device associated with this "Thing."</p>
+                        </figure>
+                        <h3>2. Configure the Cloud Dashboard:</h3>
+                        <img src="img/d5.png" <figure>
+                        <p>Create an LED Widget: In the Arduino Cloud dashboard, create a widget for controlling the LED. Assign this widget to a virtual pin (e.g., V1).</p>
+                        </figure>
+                        <p>Open a new sketch in Arduino IDE.</p>
+                        <h3>2. Open a new sketch in Arduino IDE:</h3>
+                        <b>Note:Throughout this experiment, we opted for the online Arduino IDE. However, there's the alternative of utilizing the Arduino IDE locally; in such a scenario, you'd need to download and integrate the board and library components.</b>
+                        <img src="img/s0.png" <figure>
+                        <p></p>
+                        </figure>
+                        <img src="img/s1.png" <figure>
+                        <p></p>
+                        </figure>
+                        <div class="code-box codeBox">
+                            <div class="topic">HTML Code:</div>
+                            <textarea id="codeBox" readonly>
+                                #include "thingProperties.h"
+                                const int switch1=2;
+                                
+                                
+                                void setup() {
+                                  // Initialize serial and wait for port to open:
+                                  Serial.begin(9600);
+                                  // This delay gives the chance to wait for a Serial Monitor without blocking if none is found
+                                  delay(1500); 
+                                  pinMode(switch1,OUTPUT);
+                                
+                                  // Defined in thingProperties.h
+                                  initProperties();
+                                
+                                  // Connect to Arduino IoT Cloud
+                                  ArduinoCloud.begin(ArduinoIoTPreferredConnection);
+                                  
+                                  /*
+                                     The following function allows you to obtain more information
+                                     related to the state of network and IoT Cloud connection and errors
+                                     the higher number the more granular information you’ll get.
+                                     The default is 0 (only errors).
+                                     Maximum is 4
+                                 */
+                                  setDebugMessageLevel(2);
+                                  ArduinoCloud.printDebugInfo();
+                                }
+                                
+                                void loop() {
+                                  ArduinoCloud.update();
+                                  // Your code here 
+                                  
+                                  
+                                }
+                                
+                                
+                                /*
+                                  Since Led is READ_WRITE variable, onLedChange() is
+                                  executed every time a new value is received from IoT Cloud.
+                                */
+                                void onLedChange()  {
+                                  // Add your code here to act upon Led change
+                                  if(led)
+                                  {
+                                    digitalWrite(switch1,HIGH);
+                                    Serial.println("ON");
+                                  }
+                                  else
+                                  {
+                                    digitalWrite(switch1,LOW);
+                                    Serial.println("OFF");
+                                  }
+                                }
+                    </textarea>
+                            <button id="codeButton">Copy Codes</button>
+                        </div>
+                        <p>After uploading the code, it will be connected to the Arduino Cloud IoT. You can control the IoT using your mobile phone and computer. For the application, you need to download the "IoT cloud "application.</p>
+                        <img src="img/led1.jpg" <figure>
+                        <p></p>
+                        </figure>
+                        <img src="img/led2.jpg" <figure>
+                        <p></p>
+                        </figure>
+                        <img src="img/Led-ezgif.com-video-to-gif-converter.gif" <figure>
+                        <p></p>
+                        </figure>
+
+
+
+
+                        <div id="humidity">
+                            <h1>Get Humidity Temperature data on ThingSpeak IoT</h1>
+
+                            <img src="img/tt.png" <figure>
+                            <p></p>
+                            </figure>
+                            <h3>Components Needed:</h3>
+                            <ul>
+                                <li>NodeMCU ESP8266</li>
+                                <li>DHT11 sensor</li>
+                                <li>Breadboard</li>
+                                <li>Connecting wires</li>
+                            </ul>
+                            <h3>Connect the DHT11 sensor to the NodeMCU:</h3>
+                            <img src="img/ts0.png" <figure>
+                            <p></p>
+                            </figure>
+                            <h3>2. Wiring Connections:
+                                <br>Connect the DHT11 sensor to the NodeMCU:
+                            </h3>
+
+                            <ul>
+                                <li>DHT11 VCC -> NodeMCU 3.3V</li>
+                                <li>DHT11 GND -> NodeMCU GND</li>
+                                <li>DHT11 Data pin -> NodeMCU GPIO pin D2 (or any other digital pin, adjust pin number in code)</li>
+                            </ul>
+                            <h2>Step-by-Step Process:</h2>
+                            <h3>1. Set up ThingSpeak:</h3>
+                            <img src="img/ts1.png" <figure>
+                            <p>Create a ThingSpeak account (if you don't have one) and log in.</p>
+                            </figure>
+                            <img src="img/ts2.png" <figure>
+                            <p>Create a new channel.Create a ThingSpeak account (if you don't have one) and log in.</p>
+                            </figure>
+                            <img src="img/ts4.png" <figure>
+                            <p></p>
+                            </figure>
+                            <img src="img/ts8.png" <figure>
+                            <p>Note down the Write API key provided by ThingSpeak for your channel.</p>
+                            </figure>
+                            <h2>3. Install Required Libraries:</h2>
+                            <ul>
+                                <p>In the Arduino IDE, install the following libraries if you haven't already:</p>
+                                <li>DHT sensor library for DHT11 sensor.</li>
+                                <li>ESP8266WiFi for ESP8266 connectivity.</li>
+                            </ul>
+                            <h3>4. Change additional Boards Manages:</h3>
+                            <img src="img/package2.png" <figure>
+                            <p></p>
+                            </figure>
+                            <img src="img/copy pacakage.png" <figure>
+                            <p>
+                                URL("http://arduino.esp8266.com/stable/package_esp8266com_index.json,https://dl.espressif.com/dl/package_esp32_index.json") </p>
+                            </figure>
+                            <h3>5.Arduino Sketch:</h3>
+                            <ul>
+                                <li>Open the Arduino IDE</li>
+                                <li>Copy and paste the code below, ensuring to update the placeholders (ssid, password, apiKey) with your WiFi credentials and ThingSpeak API key respectively:</li>
+
+                            </ul>
+
+                            <div class="code-box codeBox">
+                                <div class="topic">Code:</div>
+                                <textarea id="codeBox" readonly>
+
+                        
+
+#include <DHT.h>  // Including library for dht
+ 
+#include <ESP8266WiFi.h>
+                                         
+String apiKey = "540JQ37ODQU54SHB";     //  Enter your Write API key from ThingSpeak
+                                         
+const char *ssid =  "Redmi";     // replace with your wifi ssid and wpa2 key
+const char *pass =  "*****";
+const char* server = "api.thingspeak.com";
+                                         
+#define DHTPIN 0          //pin where the dht11 is connected
+                                         
+DHT dht(DHTPIN, DHT11);
+                                         
+WiFiClient client;
+                                         
+void setup() 
+{
+         Serial.begin(9600);
+         delay(10);
+        dht.begin();
+                                         
+         Serial.println("Connecting to ");
+         Serial.println(ssid);
+                                         
+        WiFi.begin(ssid, pass);
+                                         
+        while (WiFi.status() != WL_CONNECTED) 
+{
+delay(500);
+Serial.print(".");
+     }
+Serial.println("");
+Serial.println("WiFi connected");
+                                         
+    }
+                                         
+       void loop() 
+  {
+                                          
+float h = dht.readHumidity();
+float t = dht.readTemperature();
+                                              
+ if (isnan(h) || isnan(t)) 
+      {
+ Serial.println("Failed to read from DHT sensor!");
+   return;
+      }
+                                         
+ if (client.connect(server,80))   //   "184.106.153.149" or api.thingspeak.com
+{  
+                                                                    
+         String postStr = apiKey;
+         postStr +="&field1=";
+        postStr += String(t);
+          postStr +="&field2=";
+         postStr += String(h);
+         postStr += "\r\n\r\n";
+                                         
+ client.print("POST /update HTTP/1.1\n");
+ client.print("Host: api.thingspeak.com\n");
+ client.print("Connection: close\n");
+ client.print("X-THINGSPEAKAPIKEY: "+apiKey+"\n");
+ client.print("Content-Type: application/x-www-form-urlencoded\n");
+ client.print("Content-Length: ");
+client.print(postStr.length());
+ client.print("\n\n");
+ client.print(postStr);
+                                         
+Serial.print("Temperature: ");
+Serial.print(t);
+Serial.print(" degrees Celcius, Humidity: ");
+Serial.print(h);
+ Serial.println("%. Send to Thingspeak.");
+        }
+      client.stop();
+                                         
+      Serial.println("Waiting...");
+                                          
+// thingspeak needs minimum 15 sec delay between updates
+   delay(1000);
+}
+</textarea>
+                                <button id="codeButton">Copy Codes</button>
+                            </div>
+
+                            <img src="img/ts5.png" <figure>
+                            <p></p>
+                            </figure>
+
+                            <img src="img/ts6.png" <figure>
+                            <p></p>
+                            </figure>
+                            <img src="img/ts7.png" style="width: fit-content; height: fit-content;" <figure>
+                            <p>When the temparature is
+                                < 20 it change color green to red</p>
+                                    </figure>
+                                    <img src="img/H.jpg" style="width: 70%; height:300px;" <figure>
+                                    <p></p>
+                                    </figure>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+                        <div id="reference">
+                            <h1>Reference</h1>
+                            <ul>
+                                <li><a href="https://www.nexmaker.com/doc/10IOT/NodeMCUESP8266_ALiYun.html">https://www.nexmaker.com/doc/10IOT/NodeMCUESP8266_ALiYun.html</li>
+
+                                    <li><a href="https://app.arduino.cc/">https://app.arduino.cc/</a></li>
+                                <li><a href="https://thingspeak.com/">https://thingspeak.com/</a></li>
+                                <!-- <li><a href="http://www.taichi-maker.com/">太极创客</a></li>
+                                <li><a href="https://learn.adafruit.com/dht">adafruit</a></li>
+                                <li><a href="https://www.javatpoint.com/arduino">javaTpoint</a></li> -->
+
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <!--another post item-->
+
+                    <!--end of another post item-->
+                </div>
+                <!--end of content-->
+
+            </div>
+            <!--end of container-->
+
+        </div>
+        <!--end of body-->
+
+        <!--start footer-->
+        <div id="footer">
+            &copy; Copyright 2023 <a href="https://github.com/NexMaker-Fab/2023zjudem-INNOGENIUSES" target="_blank">Team InnoGeniuses</a>
+        </div>
+        <!--end of footer-->
+
+    </div>
+
+    <script src="a.js"></script>
+</body>
+
+</html>
