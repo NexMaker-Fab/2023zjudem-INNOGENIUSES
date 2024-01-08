@@ -363,7 +363,7 @@ lcd.print(distance);
                             </div>
                             <div id="openSource">
                                 <h1>Open Source Project</h1>
-                                <h3>Topic : Light Seeking Mobile Robot - BASYS 3 (VHDL)</h3>
+                                <h3> <a href="https://www.instructables.com/Light-Seeking-Mobile-Robot-BASYS-3-VHDL/"> Topic : Light Seeking Mobile Robot - BASYS 3 (VHDL)</a></h3>
                                 <img src="img/c1.png" <figure>
                                 <p>Light Seeking Mobile Robot, the main point of this project is light seeking. Most of organisms needs light in order to survive, but the amount needed varies. The behavior of organisms that need light and is often known
                                     is plants and Euglena where both organisms need light for photosynthesis (survive). Even Euglena has the ability to seeking for light sources. Through this concept, humans can take advantage of it in many ways in life
@@ -379,17 +379,17 @@ lcd.print(distance);
                                 <li>Jumper wires</li>
                                 <h3>Camera-Guided Light Seeking Mobile Robot</h3>
 
-                                <img src="img/c2.png" <figure>
+                                <img src="img/c2.png" style="width: 100%; height: 50%;" <figure>
                                 <p>In this project, BASE 2023 LC-71 will be divided into 5 divisions with different roles to maximize work and achieve goals which is recognize light source and move toward the light. Light Seeking Mobile Robot aims to find
                                     the point of the light source detected by the OV7670 camera. All functions in the form of VHDL code will be input on Basys 3 board to do the image processing and motor control.</p>
                                 </figure>
                                 <h3>Getting Ready</h3>
 
-                                <img src="img/c3.png" <figure>
+                                <img src="img/c3.png" style="width: 100%; height: 50%;" <figure>
                                 <p>Before learning more about Light Seeking Mobile Robot you can click the linked page below to learn how to install "Vivado" (the app that used to program BASYS 3 with VHDL code).</p>
                                 </figure>
                                 <h2>How to Get Started With Vivado HLs 2015.4</h2>
-                                <img src="img/m1.jpg" <figure>
+                                <img src="img/m1.jpg" style="width: 100%; height: 50%;" <figure>
                                 <p></p>
                                 </figure>
                                 <div class="code-boxes">
@@ -610,134 +610,77 @@ end Behavioral;
                                         </tr>
                                     </table>
                                 </div>
-                                <div id="iot">
-                                    <div id="led">
-                                        <h1>Blink LED using Arduino Cloud IOT</h1>
-                                        <p>To blink an LED using NodeMCU ESP8266 and Arduino Cloud, start by setting up an Arduino Cloud account and creating a "Thing" representing your NodeMCU board. Configure a widget in the cloud dashboard for controlling
-                                            the LED. In the Arduino IDE, include the required libraries, define the LED pin, and create a callback function to toggle the LED based on cloud changes. Initialize cloud properties and set up the connection
-                                            with the NodeMCU. Connect the LED and resistor in series to a digital pin and GND on the NodeMCU. Upload the code to the NodeMCU via the Arduino IDE. Finally, test the LED control through the cloud dashboard
-                                            by toggling the widget associated with the LED, witnessing the LED blink according to the cloud commands. Always exercise caution with electrical connections and components.
-                                        </p>
-                                    </div>
+                            </div>
 
-                                    <h2>Hardware Required:</h2>
-                                    <img src="img/co1.png" <figure>
-                                    <p></p>
-                                    </figure>
-                                    <ul>
-                                        <li>NodeMCU ESP8266</li>
-                                        <li>LED</li>
-                                        <li>Resistor (220-1k ohm)</li>
-                                        <li>Breadboard</li>
-                                        <li>Connecting wires</li>
-
-                                    </ul>
-                                    <b>In the same project, you can use a relay to control the room light. But ensure your safety first to control the alternative current.</b>
-                                    <h2>Steps:</h2>
-                                    <h3>1. Set Up Arduino Cloud:</h3>
-                                    <img src="img/a1.png" <figure>
-                                    <p>Create an Account: Sign up for an account on Arduino Cloud (create.arduino.cc).</p>
-                                    </figure>
-                                    <img src="img/a2.png" <figure>
-                                    <p>Create a New "Thing": Log in to your Arduino Cloud account and create a new "Thing." Name it appropriately (e.g., "LED_Blink").</p>
-                                    </figure>
-                                    <img src="img/a3.png" <figure>
-                                    <p>Create a New "Thing": Log in to your Arduino Cloud account and create a new "Thing." Name it appropriately (e.g., "Control Led").</p>
-                                    </figure>
-                                    <img src="img/a4.png" style="width: fit-content;height: 80%;" <figure>
-                                    <p>Add Device: Add your NodeMCU ESP8266 as a device associated with this "Thing."</p>
-                                    </figure>
-                                    <h3>2. Configure the Cloud Dashboard:</h3>
-                                    <img src="img/d5.png" <figure>
-                                    <p>Create an LED Widget: In the Arduino Cloud dashboard, create a widget for controlling the LED. Assign this widget to a virtual pin (e.g., V1).</p>
-                                    </figure>
-                                    <p>Open a new sketch in Arduino IDE.</p>
-                                    <h3>2. Open a new sketch in Arduino IDE:</h3>
-                                    <b>Note:Throughout this experiment, we opted for the online Arduino IDE. However, there's the alternative of utilizing the Arduino IDE locally; in such a scenario, you'd need to download and integrate the board and library components.</b>
-                                    <img src="img/s0.png" <figure>
-                                    <p></p>
-                                    </figure>
-                                    <img src="img/s1.png" <figure>
-                                    <p></p>
-                                    </figure>
-                                    <div class="code-box codeBox">
-                                        <div class="topic">Code:</div>
-                                        <textarea id="codeBox" readonly>
-                                            #include "thingProperties.h"
-                                            const int switch1=2;
-                                            
-                                            
-                                            void setup() {
-                                              // Initialize serial and wait for port to open:
-                                              Serial.begin(9600);
-                                              // This delay gives the chance to wait for a Serial Monitor without blocking if none is found
-                                              delay(1500); 
-                                              pinMode(switch1,OUTPUT);
-                                            
-                                              // Defined in thingProperties.h
-                                              initProperties();
-                                            
-                                              // Connect to Arduino IoT Cloud
-                                              ArduinoCloud.begin(ArduinoIoTPreferredConnection);
-                                              
-                                              /*
-                                                 The following function allows you to obtain more information
-                                                 related to the state of network and IoT Cloud connection and errors
-                                                 the higher number the more granular information you’ll get.
-                                                 The default is 0 (only errors).
-                                                 Maximum is 4
-                                             */
-                                              setDebugMessageLevel(2);
-                                              ArduinoCloud.printDebugInfo();
-                                            }
-                                            
-                                            void loop() {
-                                              ArduinoCloud.update();
-                                              // Your code here 
-                                              
-                                              
-                                            }
-                                            
-                                            
-                                            /*
-                                              Since Led is READ_WRITE variable, onLedChange() is
-                                              executed every time a new value is received from IoT Cloud.
-                                            */
-                                            void onLedChange()  {
-                                              // Add your code here to act upon Led change
-                                              if(led)
-                                              {
-                                                digitalWrite(switch1,HIGH);
-                                                Serial.println("ON");
-                                              }
-                                              else
-                                              {
-                                                digitalWrite(switch1,LOW);
-                                                Serial.println("OFF");
-                                              }
-                                            }
-                                </textarea>
-                                        <button id="codeButton">Copy Codes</button>
-                                    </div>
-                                    <p>After uploading the code, it will be connected to the Arduino Cloud IoT. You can control the IoT using your mobile phone and computer. For the application, you need to download the "IoT cloud "application.</p>
-                                    <img src="img/led1.jpg" <figure>
-                                    <p></p>
-                                    </figure>
-                                    <img src="img/led2.jpg" <figure>
-                                    <p></p>
-                                    </figure>
-                                    <img src="img/Led-ezgif.com-video-to-gif-converter.gif" <figure>
-                                    <p></p>
-                                    </figure>
-
-                                    <b>Note:Visit our IoT segment for more information</b>
-                                    <a href="https://nexmaker-fab.github.io/2023zjudem-INNOGENIUSES/Internet-of-things/IoT.html">URL(https://nexmaker-fab.github.io/2023zjudem-INNOGENIUSES/Internet-of-things/IoT.html)</a>
+                            <div id="iot">
+                                <div id="led">
+                                    <h1>Blink LED using Arduino Cloud IOT</h1>
+                                    <p>To blink an LED using NodeMCU ESP8266 and Arduino Cloud, start by setting up an Arduino Cloud account and creating a "Thing" representing your NodeMCU board. Configure a widget in the cloud dashboard for controlling
+                                        the LED. In the Arduino IDE, include the required libraries, define the LED pin, and create a callback function to toggle the LED based on cloud changes. Initialize cloud properties and set up the connection with
+                                        the NodeMCU. Connect the LED and resistor in series to a digital pin and GND on the NodeMCU. Upload the code to the NodeMCU via the Arduino IDE. Finally, test the LED control through the cloud dashboard by toggling
+                                        the widget associated with the LED, witnessing the LED blink according to the cloud commands. Always exercise caution with electrical connections and components.
+                                    </p>
                                 </div>
 
+                                <h2>Hardware Required:</h2>
+                                <img src="img/co1.png" <figure>
+                                <p></p>
+                                </figure>
+                                <ul>
+                                    <li>NodeMCU ESP8266</li>
+                                    <li>LED</li>
+                                    <li>Resistor (220-1k ohm)</li>
+                                    <li>Breadboard</li>
+                                    <li>Connecting wires</li>
 
+                                </ul>
+                                <b>In the same project, you can use a relay to control the room light. But ensure your safety first to control the alternative current.</b>
+                                <h2>Steps:</h2>
+                                <h3>1. Set Up Arduino Cloud:</h3>
+                                <img src="img/a1.png" style="width: 100%;height:100%" <figure>
+                                <p>Create an Account: Sign up for an account on Arduino Cloud (create.arduino.cc).</p>
+                                </figure>
+                                <img src="img/a2.png" style="width: 100%;height:100%" <figure>
+                                <p>Create a New "Thing": Log in to your Arduino Cloud account and create a new "Thing." Name it appropriately (e.g., "LED_Blink").</p>
+                                </figure>
+                                <img src="img/a3.png" style="width: 100%;height:100%" <figure>
+                                <p>Create a New "Thing": Log in to your Arduino Cloud account and create a new "Thing." Name it appropriately (e.g., "Control Led").</p>
+                                </figure>
+                                <img src="img/a4.png" style="width: fit-content;height: 80%;" <figure>
+                                <p>Add Device: Add your NodeMCU ESP8266 as a device associated with this "Thing."</p>
+                                </figure>
+                                <h3>2. Configure the Cloud Dashboard:</h3>
+                                <img src="img/d5.png" style="width: 100%;height:80%" <figure>
+                                <p>Create an LED Widget: In the Arduino Cloud dashboard, create a widget for controlling the LED. Assign this widget to a virtual pin (e.g., V1).</p>
+                                </figure>
+                                <p>Open a new sketch in Arduino IDE.</p>
+                                <h3>2. Open a new sketch in Arduino IDE:</h3>
+                                <b>Note:Throughout this experiment, we opted for the online Arduino IDE. However, there's the alternative of utilizing the Arduino IDE locally; in such a scenario, you'd need to download and integrate the board and library components.</b>
+                                <img src="img/s0.png" <img src="img/s0.png" style="width: 100%;height:80%" <figure>
+                                <p></p>
+                                </figure>
+                                <img src="img/s1.png" style="width: 70%; height:40%" <figure>
+                                <p></p>
+                                </figure>
 
+                                <p>After uploading the code, it will be connected to the Arduino Cloud IoT. You can control the IoT using your mobile phone and computer. For the application, you need to download the "IoT cloud "application.</p>
+                                <img src="img/led1.jpg" style="width: 100%; height: 70%;" <figure>
+                                <p></p>
+                                </figure>
+                                <img src="img/led2.jpg" style="width: 100%; height: 70%;" <figure>
+                                <p></p>
+                                </figure>
+                                <img src="img/Led-ezgif.com-video-to-gif-converter.gif" style="width: 100%; height: 70%;" <figure>
+                                <p></p>
+                                </figure>
 
+                                <b>Note:Visit our IoT segment for more information</b>
+                                <a href="https://nexmaker-fab.github.io/2023zjudem-INNOGENIUSES/Internet-of-things/IoT.html">URL(https://nexmaker-fab.github.io/2023zjudem-INNOGENIUSES/Internet-of-things/IoT.html)</a>
                             </div>
+
+
+
+
 
                             <div id="reference">
                                 <h1>Reference</h1>
